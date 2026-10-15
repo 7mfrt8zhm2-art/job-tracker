@@ -737,39 +737,6 @@
         sourceUrl: "https://hctz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/2506381"
       },
       {
-        id: 4,
-        company: "HL만도",
-        position: "[HL만도] 2026년 10월 신입/경력 수시채용",
-        department: "R&D / 생산관리 / 품질관리 / 물류",
-        status: "서류준비중",
-        hidden: false,
-        location: "경기 성남시(판교), 평택시, 전북 익산시, 강원 원주시",
-        employmentType: "신입 / 경력 (정규직)",
-        deadline: "2026-10-18 23:59 (D-3)",
-        deadlineDate: "2026-10-18T23:59:59",
-        deadlineHighlight: true,
-        addedDate: "2026-10-14",
-        tasks: [
-          "자동차 섀시 주행 안전 핵심 부품(제동, 조향, 현가) 및 ADAS 연구개발/설계",
-          "생산 공정 관리, 생산성 향상 및 제조 라인 합리화",
-          "신차 부품 품질 검증, 신뢰성 평가 및 품질 보증(QA/QC)",
-          "공급망 및 물류 시스템 운영 최적화"
-        ],
-        requirements: [
-          "4년제 대학교 졸업자 또는 졸업 예정자 (신입 기준)",
-          "기계, 전기전자, 제어, 컴퓨터공학, 산업공학 등 관련 공학계열 전공자",
-          "해외여행에 결격 사유가 없는 분"
-        ],
-        preferences: [
-          "영어 능통자 우대 (글로벌 커뮤니케이션 역량)",
-          "자동차 부품 관련 인턴십 또는 프로젝트 경험자",
-          "관련 기사/자격증 보유자"
-        ],
-        process: "서류 접수(~10/18 23:59) → 인적성 검사 → 1차 실무 면접 → 2차 임원 면접 → 채용 검진 → 최종 입사",
-        url: "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55240850",
-        sourceUrl: "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55240850"
-      },
-      {
         id: 5,
         company: "허드슨첨단소재코리아(주)",
         position: "각 부문별 신입/경력 채용",
@@ -1085,6 +1052,7 @@
       if (isFirebaseReady && jobsRef) {
         jobsRef.set(jobPostings).catch(e => {
           console.warn('Firebase save error:', e);
+          showToast('동기화 실패: Firebase 규칙에서 쓰기 권한을 확인해주세요.');
         });
       }
       // 2. 로컬 브라우저 캐시 백업
@@ -1400,20 +1368,21 @@
           syncText.textContent = '실시간 멀티 디바이스 동기화 됨';
         }
 
-        if (Array.isArray(data) && data.length > 0) {
-          // 새로 추가된 DEFAULT_JOB_POSTINGS가 있다면 자동 병합
-          const existingIds = new Set(data.map(j => j.id));
-          const newItems = DEFAULT_JOB_POSTINGS.filter(j => !existingIds.has(j.id));
-          if (newItems.length > 0) {
-            jobPostings = [...data, ...newItems];
-            saveJobPostings();
-          } else {
-            jobPostings = data;
-          }
-        } else {
-          // 최초 실행 시 클라우드 DB에 기본 공고 목록 등록
+        let list = [];
+        if (Array.isArray(data)) {
+          list = data.filter(Boolean);
+        } else if (data && typeof data === 'object') {
+          list = Object.values(data).filter(Boolean);
+        }
+
+        if (list.length > 0) {
+          jobPostings = list;
+        } else if (data === null) {
+          // 최초 1회 클라우드가 비어있을 때만 기본 목록 등록
           jobPostings = JSON.parse(JSON.stringify(DEFAULT_JOB_POSTINGS));
           jobsRef.set(jobPostings);
+        } else {
+          jobPostings = [];
         }
         try { localStorage.setItem(STORAGE_KEY, JSON.stringify(jobPostings)); } catch(e){}
         renderJobs();
