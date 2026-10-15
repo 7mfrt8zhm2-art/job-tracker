@@ -352,6 +352,180 @@
       z-index: 1000;
     }
     .toast.show { opacity: 1; transform: translateY(0); }
+
+    /* 모바일 반응형 최적화 */
+    @media (max-width: 640px) {
+      body {
+        padding: 16px 12px;
+      }
+      header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+      .title-group h1 {
+        font-size: 22px;
+      }
+      .title-group p {
+        font-size: 13px;
+        word-break: keep-all;
+      }
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 6px;
+      }
+      .stat-card {
+        min-width: 0;
+        padding: 8px 4px;
+        text-align: center;
+        border-radius: 10px;
+      }
+      .stat-card .label {
+        font-size: 10px;
+      }
+      .stat-card .value {
+        font-size: 17px;
+      }
+
+      .controls {
+        padding: 12px;
+        gap: 10px;
+        margin-bottom: 16px;
+        border-radius: 12px;
+      }
+      .controls-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+      }
+      .search-box {
+        min-width: 100%;
+      }
+      .search-box input {
+        padding: 9px 12px;
+        font-size: 13px;
+      }
+      .sort-box {
+        width: 100%;
+        justify-content: space-between;
+      }
+      .sort-select {
+        flex: 1;
+        padding: 7px 10px;
+        font-size: 12px;
+      }
+      .filter-tabs {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 4px;
+        -webkit-overflow-scrolling: touch;
+      }
+      .filter-btn {
+        flex-shrink: 0;
+        padding: 6px 10px;
+        font-size: 12px;
+        white-space: nowrap;
+      }
+      .btn-reset {
+        margin-left: 0;
+        align-self: flex-end;
+        padding: 5px 8px;
+      }
+
+      /* 핵심 개선: 카드 상단 영역 2단 분리로 글자 꺾임 완전 방지 */
+      .job-card {
+        padding: 16px 14px;
+        border-radius: 12px;
+      }
+      .card-top {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+      .card-title-area {
+        width: 100%;
+      }
+      .company-title {
+        font-size: 13px;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      .position-title {
+        font-size: 16px;
+        line-height: 1.4;
+        word-break: keep-all;
+        margin-top: 4px;
+      }
+      .card-actions {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 6px;
+        padding-top: 8px;
+        border-top: 1px solid #f1f5f9;
+      }
+      .status-select-wrap {
+        flex: 1;
+      }
+      .status-select {
+        width: 100%;
+        font-size: 11px;
+        padding: 5px 8px;
+        padding-right: 20px;
+        background-position: right 6px center;
+      }
+      .btn-icon {
+        width: 26px;
+        height: 26px;
+        font-size: 10px;
+        flex-shrink: 0;
+      }
+      .btn-action-text {
+        padding: 4px 7px;
+        font-size: 11px;
+        flex-shrink: 0;
+      }
+
+      .card-meta {
+        gap: 8px 12px;
+        font-size: 12px;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+      }
+      .card-details {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 12px;
+        font-size: 12px;
+      }
+      .detail-section li {
+        word-break: keep-all;
+      }
+
+      .card-bottom {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        padding-top: 10px;
+      }
+      .process-text {
+        font-size: 11px;
+        word-break: keep-all;
+      }
+      .origin-link {
+        width: 100%;
+        justify-content: center;
+        background: var(--primary-light);
+        padding: 9px;
+        border-radius: 8px;
+        text-align: center;
+        font-size: 13px;
+      }
+    }
   </style>
 </head>
 <body>
