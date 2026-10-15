@@ -389,8 +389,8 @@
         <div class="sort-box">
           <span>정렬:</span>
           <select id="sort-select" class="sort-select" onchange="changeSort(this.value)">
+            <option value="deadline" selected>마감일 임박순</option>
             <option value="custom">사용자 지정 순서 (드래그/버튼 이동)</option>
-            <option value="deadline">마감일 임박순</option>
             <option value="newest">최신 등록순</option>
             <option value="company">회사명 가나다순</option>
           </select>
@@ -811,7 +811,7 @@
     const STORAGE_KEY = 'gemini_job_postings_tracker_v1';
     let jobPostings = loadJobPostings();
     let currentFilter = 'all';
-    let currentSort = 'custom';
+    let currentSort = 'deadline';
     let draggedItemIndex = null;
 
     function loadJobPostings() {
@@ -946,8 +946,8 @@
         jobPostings = JSON.parse(JSON.stringify(DEFAULT_JOB_POSTINGS));
         saveJobPostings();
         currentFilter = 'all';
-        currentSort = 'custom';
-        document.getElementById('sort-select').value = 'custom';
+        currentSort = 'deadline';
+        document.getElementById('sort-select').value = 'deadline';
         document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
         document.querySelector('.filter-btn').classList.add('active');
         renderJobs();
@@ -1025,7 +1025,14 @@
 
       // 정렬 처리
       if (currentSort === 'deadline') {
-        displayList.sort((a, b) => (a.job.deadlineDate || '9999').localeCompare(b.job.deadlineDate || '9999'));
+        displayList.sort((a, b) => {
+          const isClosedA = a.job.status === '마감_불합격';
+          const isClosedB = b.job.status === '마감_불합격';
+          if (isClosedA !== isClosedB) {
+            return isClosedA ? 1 : -1; // 마감된 공고는 맨 아래로 정렬
+          }
+          return (a.job.deadlineDate || '9999').localeCompare(b.job.deadlineDate || '9999');
+        });
       } else if (currentSort === 'newest') {
         displayList.sort((a, b) => b.job.id - a.job.id);
       } else if (currentSort === 'company') {
