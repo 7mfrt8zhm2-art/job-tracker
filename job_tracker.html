@@ -526,14 +526,57 @@
         font-size: 13px;
       }
     }
+
+    /* 실시간 동기화 뱃지 스타일 */
+    .sync-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      color: var(--text-muted);
+      background: #f1f5f9;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-weight: 500;
+      border: 1px solid var(--border);
+      margin-top: 6px;
+      transition: all 0.2s;
+    }
+    .sync-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #cbd5e1;
+      display: inline-block;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+    .sync-badge.online .sync-dot {
+      background: #22c55e;
+      box-shadow: 0 0 6px #22c55e;
+    }
+    .sync-badge.online {
+      background: #f0fdf4;
+      border-color: #bbf7d0;
+      color: #166534;
+    }
+    .sync-badge.offline .sync-dot {
+      background: #f59e0b;
+    }
   </style>
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
 </head>
 <body>
   <div class="container">
     <header>
       <div class="title-group">
         <h1>채용 공고 트래커</h1>
-        <p>공고 순서 변경(드래그 또는 ▲▼), 상태 변경, 숨기기 및 삭제를 자유롭게 관리할 수 있습니다.</p>
+        <p>공고 순서 변경, 상태 변경, 숨기기 및 삭제가 모든 기기에서 실시간 동기화됩니다.</p>
+        <div id="sync-status" class="sync-badge">
+          <span class="sync-dot"></span>
+          <span id="sync-text">실시간 클라우드 동기화 연결 중...</span>
+        </div>
       </div>
       <div class="stats">
         <div class="stat-card">
@@ -983,10 +1026,36 @@
     ];
 
     const STORAGE_KEY = 'gemini_job_postings_tracker_v1';
-    let jobPostings = loadJobPostings();
+    let jobPostings = JSON.parse(JSON.stringify(DEFAULT_JOB_POSTINGS));
     let currentFilter = 'all';
     let currentSort = 'deadline';
     let draggedItemIndex = null;
+
+    // Firebase Realtime Database 설정
+    const firebaseConfig = {
+      apiKey: "AIzaSyCXa3Db-XIF99Ytc0S0pthHfkQ6BF1AZLQ",
+      authDomain: "job-tracker-99cf9.firebaseapp.com",
+      databaseURL: "https://job-tracker-99cf9-default-rtdb.firebaseio.com",
+      projectId: "job-tracker-99cf9",
+      storageBucket: "job-tracker-99cf9.firebasestorage.app",
+      messagingSenderId: "968009124616",
+      appId: "1:968009124616:web:125a7e6a4eb8c0ebe3babd"
+    };
+
+    let db = null;
+    let jobsRef = null;
+    let isFirebaseReady = false;
+
+    try {
+      if (typeof firebase !== 'undefined') {
+        firebase.initializeApp(firebaseConfig);
+        db = firebase.database();
+        jobsRef = db.ref('jobPostings');
+        isFirebaseReady = true;
+      }
+    } catch (e) {
+      console.warn('Firebase init error:', e);
+    }
 
     function loadJobPostings() {
       try {
@@ -1012,6 +1081,13 @@
     }
 
     function saveJobPostings() {
+      // 1. Firebase 실시간 데이터베이스에 저장 -> 모든 기기에 0.1초 즉시 동기화
+      if (isFirebaseReady && jobsRef) {
+        jobsRef.set(jobPostings).catch(e => {
+          console.warn('Firebase save error:', e);
+        });
+      }
+      // 2. 로컬 브라우저 캐시 백업
       try {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(jobPostings));
       } catch (e) {
@@ -1125,7 +1201,7 @@
         document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
         document.querySelector('.filter-btn').classList.add('active');
         renderJobs();
-        showToast('기본 데이터로 복원되었습니다.');
+        showToast('클라우드 기본 데이터로 복원되었습니다.');
       }
     }
 
@@ -1313,8 +1389,48 @@
       }).join('');
     }
 
-    // 초기 실행
-    renderJobs();
+    // 실시간 클라우드 리스너 초기화
+    if (isFirebaseReady && jobsRef) {
+      jobsRef.on('value', snapshot => {
+        const data = snapshot.val();
+        const syncBadge = document.getElementById('sync-status');
+        const syncText = document.getElementById('sync-text');
+        if (syncBadge && syncText) {
+          syncBadge.className = 'sync-badge online';
+          syncText.textContent = '실시간 멀티 디바이스 동기화 됨';
+        }
+
+        if (Array.isArray(data) && data.length > 0) {
+          // 새로 추가된 DEFAULT_JOB_POSTINGS가 있다면 자동 병합
+          const existingIds = new Set(data.map(j => j.id));
+          const newItems = DEFAULT_JOB_POSTINGS.filter(j => !existingIds.has(j.id));
+          if (newItems.length > 0) {
+            jobPostings = [...data, ...newItems];
+            saveJobPostings();
+          } else {
+            jobPostings = data;
+          }
+        } else {
+          // 최초 실행 시 클라우드 DB에 기본 공고 목록 등록
+          jobPostings = JSON.parse(JSON.stringify(DEFAULT_JOB_POSTINGS));
+          jobsRef.set(jobPostings);
+        }
+        try { localStorage.setItem(STORAGE_KEY, JSON.stringify(jobPostings)); } catch(e){}
+        renderJobs();
+      }, error => {
+        console.warn('Firebase listener error:', error);
+        const syncBadge = document.getElementById('sync-status');
+        const syncText = document.getElementById('sync-text');
+        if (syncBadge && syncText) {
+          syncBadge.className = 'sync-badge offline';
+          syncText.textContent = '오프라인 (로컬 모드)';
+        }
+      });
+    } else {
+      // Firebase 연결 실패 시 로컬스토리지 fallback
+      jobPostings = loadJobPostings();
+      renderJobs();
+    }
   </script>
 </body>
 </html>
