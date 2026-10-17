@@ -200,7 +200,7 @@
     .drag-handle:active { cursor: grabbing; }
     .position-title { font-size: 18px; font-weight: 700; margin-top: 2px; }
 
-    /* 상단 액션 바 (상태 변경 드롭다운 + 순서 이동 + 숨김/삭제) */
+    /* 상단 액션 바 */
     .card-actions {
       display: flex;
       align-items: center;
@@ -283,6 +283,7 @@
     }
     .meta-item { display: inline-flex; align-items: center; gap: 6px; }
     .meta-highlight { color: #dc2626; font-weight: 600; }
+    .meta-closed { color: #94a3b8; text-decoration: line-through; font-weight: 500; }
 
     .card-details {
       display: grid;
@@ -355,176 +356,39 @@
 
     /* 모바일 반응형 최적화 */
     @media (max-width: 640px) {
-      body {
-        padding: 16px 12px;
-      }
-      header {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 12px;
-        margin-bottom: 16px;
-      }
-      .title-group h1 {
-        font-size: 22px;
-      }
-      .title-group p {
-        font-size: 13px;
-        word-break: keep-all;
-      }
-      .stats {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 6px;
-      }
-      .stat-card {
-        min-width: 0;
-        padding: 8px 4px;
-        text-align: center;
-        border-radius: 10px;
-      }
-      .stat-card .label {
-        font-size: 10px;
-      }
-      .stat-card .value {
-        font-size: 17px;
-      }
-
-      .controls {
-        padding: 12px;
-        gap: 10px;
-        margin-bottom: 16px;
-        border-radius: 12px;
-      }
-      .controls-row {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 8px;
-      }
-      .search-box {
-        min-width: 100%;
-      }
-      .search-box input {
-        padding: 9px 12px;
-        font-size: 13px;
-      }
-      .sort-box {
-        width: 100%;
-        justify-content: space-between;
-      }
-      .sort-select {
-        flex: 1;
-        padding: 7px 10px;
-        font-size: 12px;
-      }
-      .filter-tabs {
-        overflow-x: auto;
-        flex-wrap: nowrap;
-        padding-bottom: 4px;
-        -webkit-overflow-scrolling: touch;
-      }
-      .filter-btn {
-        flex-shrink: 0;
-        padding: 6px 10px;
-        font-size: 12px;
-        white-space: nowrap;
-      }
-      .btn-reset {
-        margin-left: 0;
-        align-self: flex-end;
-        padding: 5px 8px;
-      }
-
-      /* 핵심 개선: 카드 상단 영역 2단 분리로 글자 꺾임 완전 방지 */
-      .job-card {
-        padding: 16px 14px;
-        border-radius: 12px;
-      }
-      .card-top {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 10px;
-        margin-bottom: 10px;
-      }
-      .card-title-area {
-        width: 100%;
-      }
-      .company-title {
-        font-size: 13px;
-        flex-wrap: wrap;
-        gap: 6px;
-      }
-      .position-title {
-        font-size: 16px;
-        line-height: 1.4;
-        word-break: keep-all;
-        margin-top: 4px;
-      }
-      .card-actions {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 6px;
-        padding-top: 8px;
-        border-top: 1px solid #f1f5f9;
-      }
-      .status-select-wrap {
-        flex: 1;
-      }
-      .status-select {
-        width: 100%;
-        font-size: 11px;
-        padding: 5px 8px;
-        padding-right: 20px;
-        background-position: right 6px center;
-      }
-      .btn-icon {
-        width: 26px;
-        height: 26px;
-        font-size: 10px;
-        flex-shrink: 0;
-      }
-      .btn-action-text {
-        padding: 4px 7px;
-        font-size: 11px;
-        flex-shrink: 0;
-      }
-
-      .card-meta {
-        gap: 8px 12px;
-        font-size: 12px;
-        margin-bottom: 10px;
-        padding-bottom: 10px;
-      }
-      .card-details {
-        grid-template-columns: 1fr;
-        gap: 12px;
-        margin-bottom: 12px;
-        font-size: 12px;
-      }
-      .detail-section li {
-        word-break: keep-all;
-      }
-
-      .card-bottom {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 8px;
-        padding-top: 10px;
-      }
-      .process-text {
-        font-size: 11px;
-        word-break: keep-all;
-      }
-      .origin-link {
-        width: 100%;
-        justify-content: center;
-        background: var(--primary-light);
-        padding: 9px;
-        border-radius: 8px;
-        text-align: center;
-        font-size: 13px;
-      }
+      body { padding: 16px 12px; }
+      header { flex-direction: column; align-items: stretch; gap: 12px; margin-bottom: 16px; }
+      .title-group h1 { font-size: 22px; }
+      .title-group p { font-size: 13px; word-break: keep-all; }
+      .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+      .stat-card { min-width: 0; padding: 8px 4px; text-align: center; border-radius: 10px; }
+      .stat-card .label { font-size: 10px; }
+      .stat-card .value { font-size: 17px; }
+      .controls { padding: 12px; gap: 10px; margin-bottom: 16px; border-radius: 12px; }
+      .controls-row { flex-direction: column; align-items: stretch; gap: 8px; }
+      .search-box { min-width: 100%; }
+      .search-box input { padding: 9px 12px; font-size: 13px; }
+      .sort-box { width: 100%; justify-content: space-between; }
+      .sort-select { flex: 1; padding: 7px 10px; font-size: 12px; }
+      .filter-tabs { overflow-x: auto; flex-wrap: nowrap; padding-bottom: 4px; -webkit-overflow-scrolling: touch; }
+      .filter-btn { flex-shrink: 0; padding: 6px 10px; font-size: 12px; white-space: nowrap; }
+      .btn-reset { margin-left: 0; align-self: flex-end; padding: 5px 8px; }
+      .job-card { padding: 16px 14px; border-radius: 12px; }
+      .card-top { flex-direction: column; align-items: stretch; gap: 10px; margin-bottom: 10px; }
+      .card-title-area { width: 100%; }
+      .company-title { font-size: 13px; flex-wrap: wrap; gap: 6px; }
+      .position-title { font-size: 16px; line-height: 1.4; word-break: keep-all; margin-top: 4px; }
+      .card-actions { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 6px; padding-top: 8px; border-top: 1px solid #f1f5f9; }
+      .status-select-wrap { flex: 1; }
+      .status-select { width: 100%; font-size: 11px; padding: 5px 8px; padding-right: 20px; background-position: right 6px center; }
+      .btn-icon { width: 26px; height: 26px; font-size: 10px; flex-shrink: 0; }
+      .btn-action-text { padding: 4px 7px; font-size: 11px; flex-shrink: 0; }
+      .card-meta { gap: 8px 12px; font-size: 12px; margin-bottom: 10px; padding-bottom: 10px; }
+      .card-details { grid-template-columns: 1fr; gap: 12px; margin-bottom: 12px; font-size: 12px; }
+      .detail-section li { word-break: keep-all; }
+      .card-bottom { flex-direction: column; align-items: stretch; gap: 8px; padding-top: 10px; }
+      .process-text { font-size: 11px; word-break: keep-all; }
+      .origin-link { width: 100%; justify-content: center; background: var(--primary-light); padding: 9px; border-radius: 8px; text-align: center; font-size: 13px; }
     }
 
     /* 실시간 동기화 뱃지 스타일 */
@@ -550,18 +414,9 @@
       display: inline-block;
       transition: background 0.3s, box-shadow 0.3s;
     }
-    .sync-badge.online .sync-dot {
-      background: #22c55e;
-      box-shadow: 0 0 6px #22c55e;
-    }
-    .sync-badge.online {
-      background: #f0fdf4;
-      border-color: #bbf7d0;
-      color: #166534;
-    }
-    .sync-badge.offline .sync-dot {
-      background: #f59e0b;
-    }
+    .sync-badge.online .sync-dot { background: #22c55e; box-shadow: 0 0 6px #22c55e; }
+    .sync-badge.online { background: #f0fdf4; border-color: #bbf7d0; color: #166534; }
+    .sync-badge.offline .sync-dot { background: #f59e0b; }
   </style>
   <!-- Firebase SDK -->
   <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
@@ -646,7 +501,7 @@
         hidden: false,
         location: "서울 강남구 (강남연구소)",
         employmentType: "연구직 신입 (정규직)",
-        deadline: "2026-10-22 11:00 (D-7)",
+        deadline: "2026-10-22 11:00",
         deadlineDate: "2026-10-22T11:00:00",
         deadlineHighlight: true,
         addedDate: "2026-10-14",
@@ -678,7 +533,7 @@
         hidden: false,
         location: "서울 강남구 (강남연구소)",
         employmentType: "관리직 신입 (정규직)",
-        deadline: "2026-10-22 11:00 (D-7)",
+        deadline: "2026-10-22 11:00",
         deadlineDate: "2026-10-22T11:00:00",
         deadlineHighlight: true,
         addedDate: "2026-10-14",
@@ -745,7 +600,7 @@
         hidden: false,
         location: "충북 청주시 (흥덕구/상당구), 경기 성남시(판교)",
         employmentType: "신입 / 경력",
-        deadline: "2026-10-13 마감 (접수 마감)",
+        deadline: "2026-10-13 23:59",
         deadlineDate: "2026-10-13T23:59:59",
         deadlineHighlight: false,
         addedDate: "2026-10-14",
@@ -775,7 +630,7 @@
         hidden: false,
         location: "대전광역시 유성구 (본사/연구소)",
         employmentType: "연구직 신입 (정규직)",
-        deadline: "2026-11-01 06:59 (D-17)",
+        deadline: "2026-11-01 06:59",
         deadlineDate: "2026-11-01T06:59:00",
         deadlineHighlight: false,
         addedDate: "2026-10-14",
@@ -806,8 +661,8 @@
         hidden: false,
         location: "경기 화성·평택·이천·용인, 충북 청주 (직무별 상이)",
         employmentType: "인턴 (정규직 전환형)",
-        deadline: "2026-10-18 24:00 (D-3)",
-        deadlineDate: "2026-10-18T24:00:00",
+        deadline: "2026-10-18 24:00",
+        deadlineDate: "2026-10-18T23:59:59",
         deadlineHighlight: true,
         addedDate: "2026-10-14",
         tasks: [
@@ -839,7 +694,7 @@
         hidden: false,
         location: "경기 수원시 권선구",
         employmentType: "신입 (정규직)",
-        deadline: "2026-11-14 23:59 (D-30)",
+        deadline: "2026-11-14 23:59",
         deadlineDate: "2026-11-14T23:59:59",
         deadlineHighlight: false,
         addedDate: "2026-10-15",
@@ -870,7 +725,7 @@
         hidden: false,
         location: "경남 진주(본원), 경기 부천, 경기 이천, 충북 청주 (분야별 상이)",
         employmentType: "계약직 (최대 2년 기간제 위촉연구원)",
-        deadline: "2026-10-29 17:00 (D-14)",
+        deadline: "2026-10-29 17:00",
         deadlineDate: "2026-10-29T17:00:00",
         deadlineHighlight: true,
         addedDate: "2026-10-15",
@@ -903,7 +758,7 @@
         hidden: false,
         location: "경남 진주(본원), 충북 청주, 경기 이천·부천",
         employmentType: "정규직 (연구직)",
-        deadline: "2026-10-29 17:00 (D-14)",
+        deadline: "2026-10-29 17:00",
         deadlineDate: "2026-10-29T17:00:00",
         deadlineHighlight: true,
         addedDate: "2026-10-15",
@@ -934,7 +789,7 @@
         hidden: false,
         location: "경남 진주(본원), 충북 청주, 경기 이천·부천",
         employmentType: "인턴 (체험형 청년인턴)",
-        deadline: "2026-10-29 17:00 (D-14)",
+        deadline: "2026-10-29 17:00",
         deadlineDate: "2026-10-29T17:00:00",
         deadlineHighlight: true,
         addedDate: "2026-10-15",
@@ -999,7 +854,7 @@
         hidden: false,
         location: "광주광역시 북구(본원), 경기 안양 등",
         employmentType: "정규직 (일반직)",
-        deadline: "2026-10-30 17:00 (D-14)",
+        deadline: "2026-10-30 17:00",
         deadlineDate: "2026-10-30T17:00:00",
         deadlineHighlight: true,
         addedDate: "2026-10-16",
@@ -1030,7 +885,7 @@
         hidden: false,
         location: "광주광역시 북구 (본원)",
         employmentType: "계약직 (연구/기술/행정)",
-        deadline: "2026-10-27 17:00 (D-11)",
+        deadline: "2026-10-27 17:00",
         deadlineDate: "2026-10-27T17:00:00",
         deadlineHighlight: true,
         addedDate: "2026-10-16",
@@ -1060,7 +915,7 @@
         hidden: false,
         location: "충북 오창(오창센터), 대전(본원), 서울(수도권센터)",
         employmentType: "기간제 근로자 / 연수직(Post-Doc)",
-        deadline: "2026-10-21 16:00 (D-5)",
+        deadline: "2026-10-21 16:00",
         deadlineDate: "2026-10-21T16:00:00",
         deadlineHighlight: true,
         addedDate: "2026-10-16",
@@ -1090,7 +945,7 @@
         hidden: false,
         location: "경기 화성시, 평택시, 이천시, 충북 청주시",
         employmentType: "채용 전환형 인턴 (월 300만원, 정규직 전환 가능)",
-        deadline: "2026-10-25 23:00 (D-9)",
+        deadline: "2026-10-25 23:00",
         deadlineDate: "2026-10-25T23:00:00",
         deadlineHighlight: true,
         addedDate: "2026-10-16",
@@ -1110,36 +965,36 @@
         ],
         process: "서류접수(~10/25 23:00) → 인적성검사/AI역량검사 → 1차 실무면접 → 2차 임원면접 → 채용검진 및 인턴 입사",
         url: "https://www.catch.co.kr/NCS/RecruitInfoDetails/576311",
-        sourceUrl: "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/34767"
+        sourceUrl: "https://psk.recruiter.co.kr"
       },
       {
         id: 17,
         company: "주성엔지니어링",
-        position: "IT(보안) 담당자 채용",
-        department: "IT팀 / 정보보안파트",
+        position: "[수시채용] 2026년 10월 신입 Sales, Manager 직군 집중 채용 (IT 정보보안)",
+        department: "경영지원 / IT(정보보안)",
         status: "서류준비중",
         hidden: false,
-        location: "경기 광주 / 용인",
-        employmentType: "정규직 (신입/경력)",
-        deadline: "2026-10-18 23:59 (D-2)",
-        deadlineDate: "2026-10-18T23:59:00",
+        location: "경기 용인시 기흥구 (용인 R&D센터)",
+        employmentType: "정규직 (신입, 대졸 초임 4,940만원 이상)",
+        deadline: "2026-10-21 14:59",
+        deadlineDate: "2026-10-21T14:59:00",
         deadlineHighlight: true,
         addedDate: "2026-10-16",
         tasks: [
           "사내 정보보안 인프라 구축 및 보안 시스템 운영",
           "보안 취약점 진단 및 사이버 침해사고 대응",
-          "정보보호 관리체계(ISMS 등) 수립 및 감사 대응"
+          "정보보호 관리체계 수립 및 보안 감사 대응"
         ],
         requirements: [
-          "학사 이상 (컴퓨터공학/정보보안/소프트웨어 전공)",
-          "정보보안 관련 기초 지식 보유자"
+          "학사 이상 (컴퓨터공학/정보보안/소프트웨어 등 관련 전공)",
+          "신입 (입사 후 3개월 수습 적용)"
         ],
         preferences: [
-          "정보보안기사, CISA, CISSP 등 보안 자격증 소지자",
-          "보안 관제 및 침해사고 분석 경험자"
+          "정보보안기사 등 보안 관련 자격증 소지자",
+          "네트워크 및 시스템 보안 이해도 우수자"
         ],
-        process: "서류접수(~10/18) → 서류전형 → 1차 실무진 면접 → 2차 임원 면접 → 최종 합격",
-        url: "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/34462",
+        process: "서류접수(~10/21 14:59) → 서류전형 → 면접전형 → 건강검진 및 최종 합격",
+        url: "https://jusung.career.greetinghr.com/ko/o/239942",
         sourceUrl: "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/34462"
       },
       {
@@ -1150,56 +1005,57 @@
         status: "서류준비중",
         hidden: false,
         location: "인천 중구(영종도)",
-        employmentType: "정규직 (신입/경력)",
-        deadline: "2026-10-18 23:59 (D-2)",
-        deadlineDate: "2026-10-18T23:59:00",
+        employmentType: "정규직 (신입)",
+        deadline: "2026-10-18 23:00",
+        deadlineDate: "2026-10-18T23:00:00",
         deadlineHighlight: true,
         addedDate: "2026-10-16",
         tasks: [
-          "글로벌 반도체 고객사 CS 기술대응 및 프로젝트 진행 관리",
-          "패키징 및 테스트 공정 생산 진도 모니터링 및 납기 조율",
-          "고객 기술 이슈 분석 및 유관 부서 협업 대응"
+          "고객 요청 및 이슈 접수·관리, 고객 방문 의전 수행",
+          "고객과의 실시간 커뮤니케이션 및 대응",
+          "고객 요청 사항의 내부 공유 및 협업을 통한 문제 해결"
         ],
         requirements: [
-          "학사 이상 (이공계열 또는 상경/어문계열 전공자)",
-          "영어 능통자 (글로벌 고객사 소통 필수)"
+          "학사 이상 (전자/전기/재료/반도체 등 관련 전공, 기졸업자 또는 27년 2월 졸업예정자)",
+          "학점 3.0/4.5 이상, 어학 토익스피킹 140점 또는 OPIc IH 이상 필수",
+          "영어 커뮤니케이션 가능자 및 MS Office 활용 가능자"
         ],
         preferences: [
-          "반도체 후공정(OSAT) 및 패키징 산업 이해도 보유자",
-          "우수한 대인관계 및 문제해결 역량 보유자"
+          "고객 대응 또는 고객 커뮤니케이션 관련 업무 경험 보유자",
+          "고객 만족을 위한 책임감과 긍정적인 서비스 마인드 보유자"
         ],
-        process: "서류접수(~10/18) → 서류전형 → 면접전형(영어 포함) → 채용검진 및 최종 합격",
-        url: "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/34459",
+        process: "서류전형(~10/18 23:00) → 인적성 전형 → 실무/임원 면접(영어 면접 포함) → 결과 발표",
+        url: "https://statschippac.jobagent.co.kr",
         sourceUrl: "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/34459"
       },
       {
         id: 19,
         company: "행복나래(SK계열사)",
-        position: "IT, RPA 개발 및 운영 담당자 채용",
-        department: "IT혁신팀",
+        position: "2026년도 하반기 신입사원 공개채용 (IT / RPA 개발 및 운영)",
+        department: "IT / RPA 개발 및 운영",
         status: "서류준비중",
         hidden: false,
-        location: "서울 중구",
-        employmentType: "정규직 (신입/경력)",
-        deadline: "2026-10-18 23:59 (D-2)",
+        location: "서울 중구 (서소문로)",
+        employmentType: "정규직 (신입)",
+        deadline: "2026-10-18 23:59",
         deadlineDate: "2026-10-18T23:59:00",
         deadlineHighlight: true,
         addedDate: "2026-10-16",
         tasks: [
-          "사내 업무 프로세스 자동화(RPA) 기획 및 봇 개발",
-          "ERP 및 사내 웹/앱 시스템 기능 개발 및 안정적 유지운영",
-          "업무 데이터 자동 수집 및 파이프라인 관리"
+          "RPA(A360, Automation Anywhere) 기반 자동화 과제 개발 및 Bot 운영/장애 대응",
+          "사내 시스템, SCM 구매시스템, 정산 시스템 개발 및 운영 (Java, Oracle, Spring Web)",
+          "자동화 대상 업무 프로세스 분석 및 고객사 시스템 연동 개발"
         ],
         requirements: [
-          "학사 이상 (컴퓨터공학/IT/소프트웨어 전공자)",
-          "프로그래밍 언어(Python, Java 등) 기본 역량 보유자"
+          "4년제 대학교 학사 이상"
         ],
         preferences: [
-          "UiPath, Power Automate 등 RPA 솔루션 개발 경험자",
-          "SQL 및 데이터베이스 연동 개발 경험자"
+          "컴퓨터·소프트웨어·데이터·AI 등 IT 관련 전공자 및 정보처리기사 등 자격 보유자",
+          "Java, Oracle, Spring Boot, Python 활용 경험 및 REST API 데이터 연계 경험자",
+          "RPA/IT 관련 교육 수료 또는 프로젝트 경험 보유자"
         ],
-        process: "서류접수(~10/18) → 서류심사 → SKCT(인적성) → 면접전형 → 최종 합격",
-        url: "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/34415",
+        process: "서류접수(~10/18) → SKCT 전형(온라인, 10/31) → 면접전형(11월 중) → 채용검진 → 입사(12월 중)",
+        url: "https://www.happynarae.com/happy2/connect/incruit.jsp",
         sourceUrl: "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/34415"
       },
       {
@@ -1211,7 +1067,7 @@
         hidden: false,
         location: "울산 남구 / 경기 성남",
         employmentType: "정규직",
-        deadline: "2026-10-18 23:59 (D-2)",
+        deadline: "2026-10-18 23:59",
         deadlineDate: "2026-10-18T23:59:00",
         deadlineHighlight: true,
         addedDate: "2026-10-16",
@@ -1235,32 +1091,31 @@
       {
         id: 21,
         company: "테스 (TES)",
-        position: "반도체 장비 FEM 기반 구조 해석 연구개발 (석사 이상)",
-        department: "연구개발본부 / 해석설계팀",
+        position: "FEM 기반 구조 해석 신입/경력사원 모집 (석사 이상)",
+        department: "연구직군 / 구조 해석",
         status: "서류준비중",
         hidden: false,
-        location: "경기 용인시 처인구",
-        employmentType: "정규직 (연구원)",
-        deadline: "2026-10-18 23:59 (D-2)",
-        deadlineDate: "2026-10-18T23:59:00",
+        location: "경기 용인시 처인구 (TES 본사)",
+        employmentType: "정규직 (신입/경력 무관)",
+        deadline: "2026-10-18 14:59",
+        deadlineDate: "2026-10-18T14:59:00",
         deadlineHighlight: true,
         addedDate: "2026-10-16",
         tasks: [
-          "반도체 증착(PECVD) 및 식각(Etch) 장비 챔버 기구 FEM 유한요소해석",
-          "열/유체/구조 연성 해석을 통한 장비 변형 및 내구성 진단",
-          "장비 진동 최소화 및 구조 최적화 설계 솔루션 도출"
+          "FEM 기반 설계안 검토 및 개선안 도출",
+          "Code, Standard 기준 해석 수행",
+          "국내외 인허가 및 인증 대응"
         ],
         requirements: [
-          "석사 이상 학위 소지자 또는 취득 예정자",
-          "기계공학, 항공우주공학, 재료공학 등 관련 전공자",
-          "CAE/FEM 해석 툴(ANSYS, Abaqus 등) 활용 가능자"
+          "석사 이상 필수 (기계/항공/조선 등 구조 관련 전공자)",
+          "경력 무관, 주도적 문제 해결 능력 보유자"
         ],
         preferences: [
-          "반도체 장비 구조해석 및 열유체 시뮬레이션 프로젝트 경험자",
-          "진동/동역학 해석 역량 보유자"
+          "설계 S/W 사용 경험자 및 Project 수행 경험자",
+          "관련 학위, 논문, 특허 보유자"
         ],
-        process: "서류접수(~10/18) → 서류심사 → 1차 직무면접 → 2차 임원면접 → 채용검진 및 입사",
-        url: "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/34254",
+        process: "서류접수(~10/18 14:59) → 서류심사 → 면접전형 → 채용검진 및 최종 입사",
+        url: "https://hites.career.greetinghr.com/ko/o/239182",
         sourceUrl: "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/34254"
       },
       {
@@ -1272,7 +1127,7 @@
         hidden: false,
         location: "경남 창원시 / 서울",
         employmentType: "정규직 (경력 5년 이상)",
-        deadline: "2026-10-19 23:59 (D-3)",
+        deadline: "2026-10-19 23:59",
         deadlineDate: "2026-10-19T23:59:00",
         deadlineHighlight: true,
         addedDate: "2026-10-16",
@@ -1290,8 +1145,8 @@
           "친환경 연료 추진 엔진 기술 유경험자"
         ],
         process: "서류접수(~10/19) → 서류심사 → 실무면접 → 임원면접 → 채용검진 및 최종 합격",
-        url: "https://m.jobkorea.co.kr/Recruit/GI_Read/50044528",
-        sourceUrl: "https://m.jobkorea.co.kr/info/app_down.asp?Gno=50044528"
+        url: "https://www.jobkorea.co.kr/Recruit/GI_Read/50044528",
+        sourceUrl: "https://m.jobkorea.co.kr/Recruit/GI_Read/50044528"
       },
       {
         id: 23,
@@ -1302,7 +1157,7 @@
         hidden: false,
         location: "충북 진천 / 인천",
         employmentType: "정규직 (신입/경력)",
-        deadline: "2026-10-20 23:59 (D-4)",
+        deadline: "2026-10-20 23:59",
         deadlineDate: "2026-10-20T23:59:00",
         deadlineHighlight: true,
         addedDate: "2026-10-16",
@@ -1332,7 +1187,7 @@
         hidden: false,
         location: "충북 진천 / 경기 성남",
         employmentType: "정규직 (신입/경력)",
-        deadline: "2026-10-20 23:59 (D-4)",
+        deadline: "2026-10-20 23:59",
         deadlineDate: "2026-10-20T23:59:00",
         deadlineHighlight: true,
         addedDate: "2026-10-16",
@@ -1357,30 +1212,29 @@
         id: 25,
         company: "삼화콘덴서공업",
         position: "설비보전팀, 선행개발팀(석사) 등 신입/경력 채용",
-        department: "설비보전팀 / 선행개발팀 / 품질보증팀",
+        department: "설비보전팀 / 선행개발팀(MLCC)",
         status: "서류준비중",
         hidden: false,
-        location: "경기 평택시 / 용인시",
+        location: "경기 용인시 처인구",
         employmentType: "정규직 (신입/경력)",
-        deadline: "2026-10-25 23:59 (D-9)",
+        deadline: "2026-10-25 23:59",
         deadlineDate: "2026-10-25T23:59:00",
         deadlineHighlight: true,
         addedDate: "2026-10-16",
         tasks: [
-          "MLCC/콘덴서 생산설비 유지보수, 개조개선 및 예방정비(설비보전)",
-          "차세대 고용량/고신뢰성 콘덴서 선행소재 및 부품 연구개발(선행개발 석사)",
-          "설비 가동률 및 라인 생산성 혁신 활동"
+          "설비보전팀: 콘덴서 생산 설비 사후보전 및 예방보전",
+          "선행개발팀: AI 서버향 박막 신규 소재 분석, MLCC 원자재/첨가제 소재 개발 및 신뢰성 평가"
         ],
         requirements: [
-          "학사 이상 (선행개발팀은 석사 이상 필수)",
-          "기계공학, 전기전자, 신소재/재료공학 등 전공자"
+          "설비보전: 공학계열 학사 이상 필수 (석사 우대), TOEIC 700점 이상 필수",
+          "선행개발(신입): 신소재/재료/화공/전기전자 석사 이상 필수, TOEIC 700점 이상 필수"
         ],
         preferences: [
-          "MLCC 등 수동소자 제조 공정 또는 설비 PLC 제어 경험자",
-          "유전체 세라믹 소재 연구 경험자"
+          "유전체 BT소재, 내부전극, 조성, MLCC 개발 경력 및 설비 보전 관련 전공자 우대",
+          "영어 능력 우수자 우대"
         ],
-        process: "서류접수(~10/25) → 서류전형 → 1차 실무진 면접 → 2차 임원 면접 → 채용검진 및 최종 입사",
-        url: "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/34772",
+        process: "서류,인적성전형(~10/25) → 1차면접 → 2차면접 → 채용검진 → 최종합격",
+        url: "https://samwhacapacitor.applyin.co.kr/jobs/23215",
         sourceUrl: "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/34772"
       },
       {
@@ -1392,7 +1246,7 @@
         hidden: false,
         location: "경기 안성시 / 화성 동탄",
         employmentType: "정규직",
-        deadline: "2026-10-30 23:59 (D-14)",
+        deadline: "2026-10-30 23:59",
         deadlineDate: "2026-10-30T23:59:00",
         deadlineHighlight: true,
         addedDate: "2026-10-16",
@@ -1422,7 +1276,7 @@
         hidden: false,
         location: "경기 화성시 / 서울",
         employmentType: "정규직 (신입/경력)",
-        deadline: "2026-11-07 23:59 (D-22)",
+        deadline: "2026-11-07 23:59",
         deadlineDate: "2026-11-07T23:59:00",
         deadlineHighlight: false,
         addedDate: "2026-10-16",
@@ -2052,21 +1906,124 @@
       console.warn('Firebase init error:', e);
     }
 
+    // 📅 실시간 자동 D-Day 및 마감 상태 계산 함수
+    function getDynamicDeadlineInfo(job) {
+      const rawDeadline = job.deadline || '채용시 마감';
+      const rawDateStr = job.deadlineDate || '';
+
+      // 1. 상시/수시 채용 판별
+      if (!rawDateStr || rawDateStr.startsWith('2026-12-31') || rawDeadline.includes('채용시') || rawDeadline.includes('상시')) {
+        return {
+          text: rawDeadline.replace(/\s*\(D-?\d+\)/g, '').replace(/\s*\(D-Day\)/g, '').replace(/\s*\(마감\)/g, '').trim(),
+          isClosed: false,
+          isHighlight: false,
+          sortKey: '9999-12-31T23:59:59'
+        };
+      }
+
+      // 24:00:00 표기 시 다음날 00:00으로 넘어가 날짜가 하루 밀리는 현상 방지
+      const normalizedDateStr = rawDateStr.replace('T24:00:00', 'T23:59:59');
+      const now = new Date();
+      const target = new Date(normalizedDateStr);
+
+      if (isNaN(target.getTime())) {
+        return {
+          text: rawDeadline,
+          isClosed: false,
+          isHighlight: !!job.deadlineHighlight,
+          sortKey: rawDateStr
+        };
+      }
+
+      // 기존 고정되어 있던 (D-3), (D-Day), (마감) 등의 꼬리표 제거
+      const baseText = rawDeadline
+        .replace(/\s*\(D-?\d+\)/g, '')
+        .replace(/\s*\(D-Day\)/g, '')
+        .replace(/\s*\(마감\)/g, '')
+        .replace(/\s*\(접수 마감\)/g, '')
+        .replace(/\s*마감$/g, '')
+        .trim();
+
+      // 오늘 00:00 기준 달력 일수 차이 계산
+      const todayZero = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+      const targetZero = new Date(target.getFullYear(), target.getMonth(), target.getDate());
+      const diffDays = Math.round((targetZero - todayZero) / 86400000);
+
+      // 현재 시각이 마감 시각을 지났는지 여부
+      const isPast = now.getTime() > target.getTime();
+
+      let tag = '';
+      let isClosed = false;
+      let isHighlight = false;
+
+      if (isPast || job.status === '마감_불합격') {
+        tag = '(마감)';
+        isClosed = true;
+      } else if (diffDays === 0) {
+        tag = '(D-Day)';
+        isHighlight = true;
+      } else if (diffDays > 0) {
+        tag = `(D-${diffDays})`;
+        if (diffDays <= 7) isHighlight = true;
+      } else {
+        tag = '(마감)';
+        isClosed = true;
+      }
+
+      return {
+        text: `${baseText} ${tag}`,
+        isClosed: isClosed,
+        isHighlight: isHighlight,
+        sortKey: normalizedDateStr
+      };
+    }
+
+    // 전수조사 정정 데이터 자동 패치 (클라우드에 옛날 오차 데이터가 남아 있을 경우 자동 교정)
+    function applyAuditFixes(list) {
+      let modified = false;
+      const defaultMap = new Map(DEFAULT_JOB_POSTINGS.map(d => [d.id, d]));
+
+      list.forEach(job => {
+        if (!job) return;
+        // 도쿄일렉트론코리아 24:00 날짜 밀림 보정
+        if (job.id === 7 && job.deadlineDate === '2026-10-18T24:00:00') {
+          job.deadlineDate = '2026-10-18T23:59:59';
+          modified = true;
+        }
+        // 주성엔지니어링, 스태츠칩팩코리아, 테스, 삼화콘덴서, 행복나래 등 전수조사 교정본 동기화
+        if ([17, 18, 19, 21, 22, 25].includes(job.id)) {
+          const clean = defaultMap.get(job.id);
+          if (clean && (job.deadlineDate !== clean.deadlineDate || job.url !== clean.url)) {
+            job.position = clean.position;
+            job.department = clean.department;
+            job.location = clean.location;
+            job.employmentType = clean.employmentType;
+            job.deadline = clean.deadline;
+            job.deadlineDate = clean.deadlineDate;
+            job.tasks = clean.tasks;
+            job.requirements = clean.requirements;
+            job.preferences = clean.preferences;
+            job.process = clean.process;
+            job.url = clean.url;
+            modified = true;
+          }
+        }
+      });
+      return modified;
+    }
+
     function loadJobPostings() {
       try {
         const saved = localStorage.getItem(STORAGE_KEY);
         if (saved) {
           const parsed = JSON.parse(saved);
           if (Array.isArray(parsed) && parsed.length > 0) {
-            // 새로 추가된 기본 공고(id가 저장소에 없는 항목)를 자동으로 병합
             const existingIds = new Set(parsed.map(j => j.id));
             const newDefaults = DEFAULT_JOB_POSTINGS.filter(j => !existingIds.has(j.id));
-            if (newDefaults.length > 0) {
-              const merged = [...parsed, ...newDefaults];
-              localStorage.setItem(STORAGE_KEY, JSON.stringify(merged));
-              return merged;
-            }
-            return parsed;
+            const merged = newDefaults.length > 0 ? [...parsed, ...newDefaults] : parsed;
+            applyAuditFixes(merged);
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(merged));
+            return merged;
           }
         }
       } catch (e) {
@@ -2076,14 +2033,12 @@
     }
 
     function saveJobPostings() {
-      // 1. Firebase 실시간 데이터베이스에 저장 -> 모든 기기에 0.1초 즉시 동기화
       if (isFirebaseReady && jobsRef) {
         jobsRef.set(jobPostings).catch(e => {
           console.warn('Firebase save error:', e);
           showToast('동기화 실패: Firebase 규칙에서 쓰기 권한을 확인해주세요.');
         });
       }
-      // 2. 로컬 브라우저 캐시 백업
       try {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(jobPostings));
       } catch (e) {
@@ -2109,7 +2064,7 @@
       }
     }
 
-    // 2. 공고 순서 변경 함수 (위/아래 이동)
+    // 2. 공고 순서 변경 함수
     function moveJob(index, direction) {
       const targetIndex = index + direction;
       if (targetIndex < 0 || targetIndex >= jobPostings.length) return;
@@ -2238,29 +2193,32 @@
       const container = document.getElementById('jobs-container');
       const query = document.getElementById('search-input').value.toLowerCase().trim();
 
-      // 통계 계산 (숨겨지지 않은 공고 기준)
       const visibleJobs = jobPostings.filter(j => !j.hidden);
       const hiddenJobs = jobPostings.filter(j => j.hidden);
 
       document.getElementById('stat-total').textContent = visibleJobs.length;
       document.getElementById('stat-ready').textContent = visibleJobs.filter(j => j.status === '서류준비중').length;
       document.getElementById('stat-done').textContent = visibleJobs.filter(j => j.status === '지원완료').length;
-      document.getElementById('stat-closed').textContent = visibleJobs.filter(j => j.status === '마감_불합격').length;
+      document.getElementById('stat-closed').textContent = visibleJobs.filter(j => j.status === '마감_불합격' || getDynamicDeadlineInfo(j).isClosed).length;
       document.getElementById('stat-hidden-badge').textContent = hiddenJobs.length;
 
-      // 필터링
-      let displayList = jobPostings.map((job, originalIndex) => ({ job, originalIndex }));
+      let displayList = jobPostings.map((job, originalIndex) => ({
+        job,
+        originalIndex,
+        deadlineInfo: getDynamicDeadlineInfo(job)
+      }));
 
       if (currentFilter === 'hidden') {
         displayList = displayList.filter(item => item.job.hidden);
       } else {
         displayList = displayList.filter(item => !item.job.hidden);
-        if (currentFilter !== 'all') {
-          displayList = displayList.filter(item => item.job.status === currentFilter);
+        if (currentFilter === '마감_불합격') {
+          displayList = displayList.filter(item => item.job.status === '마감_불합격' || item.deadlineInfo.isClosed);
+        } else if (currentFilter !== 'all') {
+          displayList = displayList.filter(item => item.job.status === currentFilter && !item.deadlineInfo.isClosed);
         }
       }
 
-      // 검색어 필터링
       if (query) {
         displayList = displayList.filter(item => {
           const j = item.job;
@@ -2269,15 +2227,13 @@
         });
       }
 
-      // 정렬 처리
+      // 정렬 처리 (실시간 마감 여부 반영)
       if (currentSort === 'deadline') {
         displayList.sort((a, b) => {
-          const isClosedA = a.job.status === '마감_불합격';
-          const isClosedB = b.job.status === '마감_불합격';
-          if (isClosedA !== isClosedB) {
-            return isClosedA ? 1 : -1; // 마감된 공고는 맨 아래로 정렬
+          if (a.deadlineInfo.isClosed !== b.deadlineInfo.isClosed) {
+            return a.deadlineInfo.isClosed ? 1 : -1; // 마감된 공고는 맨 아래로
           }
-          return (a.job.deadlineDate || '9999').localeCompare(b.job.deadlineDate || '9999');
+          return a.deadlineInfo.sortKey.localeCompare(b.deadlineInfo.sortKey);
         });
       } else if (currentSort === 'newest') {
         displayList.sort((a, b) => b.job.id - a.job.id);
@@ -2295,7 +2251,7 @@
         return;
       }
 
-      container.innerHTML = displayList.map(({ job, originalIndex }, displayIndex) => {
+      container.innerHTML = displayList.map(({ job, originalIndex, deadlineInfo }) => {
         const isFirst = originalIndex === 0;
         const isLast = originalIndex === jobPostings.length - 1;
 
@@ -2320,7 +2276,6 @@
               </div>
 
               <div class="card-actions">
-                <!-- 상태 변경 드롭다운 -->
                 <div class="status-select-wrap">
                   <select class="status-select status-${job.status}" onchange="changeStatus(${job.id}, this.value)">
                     <option value="서류준비중" ${job.status === '서류준비중' ? 'selected' : ''}>🟡 서류 준비중</option>
@@ -2331,11 +2286,9 @@
                   </select>
                 </div>
 
-                <!-- 순서 이동 버튼 -->
                 <button class="btn-icon" title="위로 이동" onclick="moveJob(${originalIndex}, -1)" ${isFirst ? 'disabled' : ''}>▲</button>
                 <button class="btn-icon" title="아래로 이동" onclick="moveJob(${originalIndex}, 1)" ${isLast ? 'disabled' : ''}>▼</button>
 
-                <!-- 숨기기/삭제 버튼 -->
                 <button class="btn-action-text" onclick="toggleHideJob(${job.id})">
                   ${job.hidden ? '👁️ 보이기' : '🙈 숨기기'}
                 </button>
@@ -2346,7 +2299,7 @@
             <div class="card-meta">
               <div class="meta-item">📍 ${escapeHtml(job.location || '정보 없음')}</div>
               <div class="meta-item">💼 ${escapeHtml(job.employmentType || '정규직')}</div>
-              <div class="meta-item">📅 <span class="${job.deadlineHighlight ? 'meta-highlight' : ''}">${escapeHtml(job.deadline || '채용시 마감')}</span></div>
+              <div class="meta-item">📅 <span class="${deadlineInfo.isHighlight ? 'meta-highlight' : ''} ${deadlineInfo.isClosed ? 'meta-closed' : ''}">${escapeHtml(deadlineInfo.text)}</span></div>
               <div class="meta-item">🕒 등록일: ${escapeHtml(job.addedDate || '')}</div>
             </div>
 
@@ -2405,8 +2358,11 @@
 
         if (list.length > 0) {
           jobPostings = list;
+          // 전수조사 정정 데이터 자동 패치 후 클라우드 동기화
+          if (applyAuditFixes(jobPostings)) {
+            jobsRef.set(jobPostings);
+          }
         } else if (data === null) {
-          // 최초 1회 클라우드가 비어있을 때만 기본 목록 등록
           jobPostings = JSON.parse(JSON.stringify(DEFAULT_JOB_POSTINGS));
           jobsRef.set(jobPostings);
         } else {
@@ -2424,10 +2380,12 @@
         }
       });
     } else {
-      // Firebase 연결 실패 시 로컬스토리지 fallback
       jobPostings = loadJobPostings();
       renderJobs();
     }
+
+    // 켜둔 화면에서도 1분마다 D-Day 및 마감 상태 자동 갱신
+    setInterval(renderJobs, 60000);
   </script>
 </body>
 </html>
