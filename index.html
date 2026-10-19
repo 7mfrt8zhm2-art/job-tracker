@@ -459,14 +459,14 @@
 
       <div class="controls-row">
         <div class="filter-tabs">
-          <button class="filter-btn active" onclick="setFilter('all', this)">전체</button>
-          <button class="filter-btn" onclick="setFilter('서류준비중', this)">서류 준비중</button>
+          <button class="filter-btn active" onclick="setFilter('서류준비중', this)">서류 준비중</button>
           <button class="filter-btn" onclick="setFilter('지원완료', this)">지원 완료</button>
           <button class="filter-btn" onclick="setFilter('마감_불합격', this)">마감</button>
           <button class="filter-btn badge-count" onclick="setFilter('hidden', this)">
             <span>숨긴 공고</span>
             <span id="stat-hidden-badge" style="background:#cbd5e1; color:#334155; padding:1px 6px; border-radius:10px; font-size:11px;">0</span>
           </button>
+          <button class="filter-btn" onclick="setFilter('all', this)">전체</button>
         </div>
       </div>
     </div>
@@ -484,7 +484,7 @@
     let backupJobPostings = [];
     let jobPostings = [];
     let deletedJobIds = new Set();
-    let currentFilter = 'all';
+    let currentFilter = '서류준비중';
     let currentSort = 'deadline';
     let draggedItemIndex = null;
 
