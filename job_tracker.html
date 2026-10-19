@@ -2389,8 +2389,14 @@
         }
 
         if (list.length > 0) {
+          // 새로 배포된 기본 공고(id가 클라우드에 없는 항목)를 자동으로 병합하여 클라우드에 동기화
+          const cloudIds = new Set(list.map(j => j.id));
+          const newJobsFromCode = DEFAULT_JOB_POSTINGS.filter(j => !cloudIds.has(j.id));
+          if (newJobsFromCode.length > 0) {
+            list = [...list, ...newJobsFromCode];
+            jobsRef.set(list);
+          }
           jobPostings = list;
-          // 전수조사 정정 데이터 자동 패치 후 클라우드 동기화
           if (applyAuditFixes(jobPostings)) {
             jobsRef.set(jobPostings);
           }
