@@ -1410,5 +1410,38 @@
     "process": "서류접수(~11/01 23:59) → SKCT(인성) → 면접전형 → 채용검진 및 최종 입사",
     "url": "https://www.skcareers.com/Recruit/Detail/R262228",
     "sourceUrl": "https://m.jobkorea.co.kr/info/app_down.asp?Gno=50170152"
+  },
+  {
+    "company": "현대자동차·기아",
+    "position": "소프티어 부트캠프(Softeer Bootcamp) 9기 교육생 모집 (신입 채용 연계)",
+    "department": "ICT본부 / 백엔드·데이터 엔지니어링·서비스 기획",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "서울 강남구 (오프라인/온라인 병행 8주 교육)",
+    "employmentType": "채용 연계형 교육생 (수료 시 신입 최종면접 기회 부여)",
+    "deadline": "2026-11-03 14:00",
+    "deadlineDate": "2026-11-03T14:00:00",
+    "deadlineHighlight": false,
+    "addedDate": "2026-10-19",
+    "tasks": [
+      "실무 중심 AI 에이전트 활용 및 소프트웨어 아키텍처 이론 교육",
+      "현대차·기아 실무진 1:1 멘토링 기반 팀 단위 모빌리티 SW 프로젝트 수행",
+      "백엔드 시스템 설계, 대용량 데이터 파이프라인 구축, 서비스 기획 모델링",
+      "8주 교육 과정 수료 후 현대차·기아 신입 개발자/기획자 최종 면접 진행"
+    ],
+    "requirements": [
+      "2026년 8월 ~ 2027년 8월 국내외 4년제 대학교 학사 이상 기졸업자 또는 졸업 예정자",
+      "교육 기간(2026.12.28 ~ 2027.02.26, 8주 전일제) 동안 성실히 참여 가능한 자",
+      "소프트웨어 개발, 데이터 분석, 서비스 기획 관련 기초 역량 보유자"
+    ],
+    "preferences": [
+      "교육비 전액 무상 지원 및 최신 개발 장비/소프트웨어 지급",
+      "현대차·기아 현직 개발자 직무별 밋업(Meet-up) 및 프로젝트 심사 참여",
+      "과정 우수 수료자 대상 현대자동차·기아 신입 채용 최종 면접 특전 부여"
+    ],
+    "process": "지원서 접수(~11/03 14:00) → 온라인 소프트웨어 역량 평가 → 면접 전형 → 최종 선발 → 8주 부트캠프 교육 → 채용 최종면접",
+    "url": "https://softeerbootcamp.com/",
+    "sourceUrl": "https://community.linkareer.com/job-materials/6639971",
+    "id": 48
   }
 ]
