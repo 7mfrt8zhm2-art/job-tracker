@@ -1,0 +1,1414 @@
+[
+  {
+    "id": 1,
+    "company": "현대모비스",
+    "position": "[반도체사업담당] 연구직 신입 - 반도체 설계 및 시스템 응용",
+    "department": "반도체사업담당 / HW / 회로",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "서울 강남구 (강남연구소)",
+    "employmentType": "연구직 신입 (정규직)",
+    "deadline": "2026-10-22 11:00",
+    "deadlineDate": "2026-10-22T11:00:00",
+    "deadlineHighlight": true,
+    "addedDate": "2026-10-14",
+    "tasks": [
+      "차량용 반도체(시스템 반도체, 전력 반도체 등) 회로 설계 및 로직 검증",
+      "반도체 시스템 응용 회로 및 구동 드라이버/제어 모듈 설계",
+      "차량 전장 부품 및 제어기(CCU, DCU 등) 연계 반도체 특성 평가 및 신뢰성 분석"
+    ],
+    "requirements": [
+      "학사 이상 기졸업자 또는 졸업 예정자",
+      "전자/전기/반도체/정보통신/컴퓨터공학 등 관련 공학계열 전공자",
+      "공인 어학성적(TOEIC, TOEIC Speaking, OPIc, TEPS 등) 보유자"
+    ],
+    "preferences": [
+      "EDA 툴(Cadence, Synopsys 등) 활용 및 반도체 회로 설계/검증 프로젝트 경험",
+      "차량용 전장 시스템 및 차량용 반도체 규격(AEC-Q100, ISO 26262 등) 이해도 보유자",
+      "관련 학과 석사 학위 소지자 우대"
+    ],
+    "process": "서류 접수(~10/22 11:00) → 인적성검사(HMAT) → 1차 면접 → 2차 면접/영어면접 → 채용검진 → 최종 입사",
+    "url": "https://careers.mobis.com/jobs-view?seq=4209",
+    "sourceUrl": "https://inthiswork.com/archives/407031"
+  },
+  {
+    "id": 2,
+    "company": "현대모비스",
+    "position": "[반도체사업담당] 관리직 신입 - 반도체 영업",
+    "department": "반도체사업담당 / 영업·마케팅 / 국내영업",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "서울 강남구 (강남연구소)",
+    "employmentType": "관리직 신입 (정규직)",
+    "deadline": "2026-10-22 11:00",
+    "deadlineDate": "2026-10-22T11:00:00",
+    "deadlineHighlight": true,
+    "addedDate": "2026-10-14",
+    "tasks": [
+      "OEM 및 Tier-1 대상 전력반도체, 파워모듈, 시스템반도체 제품 영업",
+      "고객사별 요구사양 분석, 프로모션 및 수주 전략 수립 (RFQ/RFI 대응)",
+      "시장·경쟁사·기술 트렌드 분석을 통한 신규 비즈니스 기회 발굴",
+      "프로젝트별 매출·손익·사업성 관리 및 제품 가격/원가 경쟁력 확보",
+      "개발·구매·생산·품질 유관 부서 협업 및 북미·유럽·아시아 글로벌 거점 커뮤니케이션"
+    ],
+    "requirements": [
+      "2027년 2월 졸업 예정자 또는 기졸업자 (학/석사)",
+      "해외여행에 결격 사유가 없는 분 (남자는 병역필 또는 면제)",
+      "공인 영어성적(TOEIC, TOEIC Speaking, OPIc, TEPS, G-TELP) 보유자"
+    ],
+    "preferences": [
+      "자동차 및 부품, 반도체 관련 산업 이해도 보유자",
+      "영어 커뮤니케이션 역량 우수자",
+      "B2B 영업 또는 비즈니스 수주 분석 경험 우대"
+    ],
+    "process": "지원서 접수(10/13~10/22 11:00) → 인적성검사(10~11월) → 1차 면접(11월) → 2차 면접/영어면접(11월) → 채용 검진(11~12월) → 최종 입사(12월)",
+    "url": "https://careers.mobis.com/jobs-view?seq=4208",
+    "sourceUrl": "https://inthiswork.com/archives/407028"
+  },
+  {
+    "id": 3,
+    "company": "onsemi (온세미)",
+    "position": "Conversion Intern for Korea MFG (제조/생산 엔지니어 - 정규직 전환형 인턴)",
+    "department": "Korea Manufacturing (제조운영본부)",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "경기 부천시 (부천사업장)",
+    "employmentType": "인턴 (정규직 전환형)",
+    "deadline": "채용시 마감 (수시채용)",
+    "deadlineDate": "2026-12-31T23:59:59",
+    "deadlineHighlight": false,
+    "addedDate": "2026-10-14",
+    "tasks": [
+      "반도체 제조 공정 모니터링 및 수율(Yield), 생산성, 사이클 타임 개선",
+      "제조 이슈 발생 시 근본 원인 분석(Root Cause Analysis) 및 재발 방지 대책 수립",
+      "신제품 도입(NPI) 및 대량 생산 램프업(Production Ramp) 활동 지원",
+      "공정 데이터 분석을 통한 품질 향상 및 원가 절감(CI) 프로젝트 수행"
+    ],
+    "requirements": [
+      "반도체, 공학, 재료/신소재, 화학공학 등 유관 전공 학사 학위자 또는 졸업 예정자",
+      "강력한 분석적 사고 및 문제 해결 능력",
+      "Excel, JMP, Minitab 등 통계 및 데이터 분석 도구 활용 역량 우대",
+      "한국어 및 영어 커뮤니케이션 역량"
+    ],
+    "preferences": [
+      "웨이퍼 제조(Fab), 어셈블리 또는 반도체 제조 공정 경험 보유자",
+      "SPC, DOE, Six Sigma, Lean 생산 기법에 대한 이해도 보유자"
+    ],
+    "process": "서류 전형 → 직무 및 영어 인터뷰 → 채용 검진 → 전환형 인턴 입사",
+    "url": "https://hctz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/2506381",
+    "sourceUrl": "https://hctz.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/2506381"
+  },
+  {
+    "id": 5,
+    "company": "허드슨첨단소재코리아(주)",
+    "position": "각 부문별 신입/경력 채용",
+    "department": "제조 / 품질 / 생산기술",
+    "status": "마감_불합격",
+    "hidden": false,
+    "location": "충북 청주시 (흥덕구/상당구), 경기 성남시(판교)",
+    "employmentType": "신입 / 경력",
+    "deadline": "2026-10-13 23:59",
+    "deadlineDate": "2026-10-13T23:59:59",
+    "deadlineHighlight": false,
+    "addedDate": "2026-10-14",
+    "tasks": [
+      "디스플레이 편광필름 생산 라인 공정 운영 및 오퍼레이팅",
+      "제조 설비 가동 상태 점검 및 트러블슈팅 지원",
+      "제품 품질 검사 및 공정 불량 모니터링"
+    ],
+    "requirements": [
+      "고등학교 졸업 이상 / 초대졸 / 대졸 (직무별 상이)",
+      "교대 근무 가능자 (생산/제조직 지원 시)"
+    ],
+    "preferences": [
+      "화학/전자/소재 분야 제조업체 근무 경험자",
+      "인근 거주자 우대"
+    ],
+    "process": "서류 접수(~10/13 마감) → 면접 전형 → 채용 검진 → 입사",
+    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55223179",
+    "sourceUrl": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55223179"
+  },
+  {
+    "id": 6,
+    "company": "아이쓰리시스템(주)",
+    "position": "반도체 소자개발 부문 연구원 채용 (신입)",
+    "department": "연구소 / 반도체소자개발",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "대전광역시 유성구 (본사/연구소)",
+    "employmentType": "연구직 신입 (정규직)",
+    "deadline": "2026-11-01 06:59",
+    "deadlineDate": "2026-11-01T06:59:00",
+    "deadlineHighlight": false,
+    "addedDate": "2026-10-14",
+    "tasks": [
+      "적외선 영상센서 및 특수 반도체 소자 설계·개발",
+      "반도체 소자의 전기적·광학적 특성 측정, 데이터 분석 및 성능 최적화",
+      "소자 단위 신뢰성 평가 및 공정 연계 불량 분석"
+    ],
+    "requirements": [
+      "국내외 4년제 대학교 졸업자 또는 졸업 예정자 (신입)",
+      "전자/전기/반도체/물리/신소재공학 등 관련 전공자"
+    ],
+    "preferences": [
+      "반도체 소자 물리(Physics) 및 반도체 공정에 대한 탄탄한 이해 보유자",
+      "반도체 특성 측정 장비(Parameter Analyzer, Probe Station 등) 운용 경험자",
+      "관련 분야 석사 학위 보유자 우대"
+    ],
+    "process": "서류 접수(~11/01 06:59) → 인적성 검사 → 1차/2차 면접 전형 → 채용 검진 → 최종 합격",
+    "url": "https://i3system.career.greetinghr.com/ko/o/239953",
+    "sourceUrl": "https://inthiswork.com/archives/406832"
+  },
+  {
+    "id": 7,
+    "company": "도쿄일렉트론코리아",
+    "position": "2026년 하반기 채용연계형 인턴사원 채용",
+    "department": "Field Engineer / Process Engineer / Manufacturing / Sales",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "경기 화성·평택·이천·용인, 충북 청주 (직무별 상이)",
+    "employmentType": "인턴 (정규직 전환형)",
+    "deadline": "2026-10-18 24:00",
+    "deadlineDate": "2026-10-18T23:59:59",
+    "deadlineHighlight": true,
+    "addedDate": "2026-10-14",
+    "tasks": [
+      "Field Engineer: 반도체 제조 장비 설치/셋업, 고객사 라인 유지보수 및 트러블슈팅, 기술지원",
+      "Process Engineer: 반도체 식각/증착 등 공정 개발·최적화, 공정 성능 평가 및 Data/Log 분석",
+      "Manufacturing Engineer: 반도체 장비 Unit 조립·제작, 장비 성능 Test 및 품질 검사",
+      "Engineer Operation / Parts Sales / 총무 등 부문별 운영 및 비즈니스 지원"
+    ],
+    "requirements": [
+      "4년제 대학교 학사 이상 (기졸업자 또는 2027년 2월 졸업예정자)",
+      "지원 직무별 관련 공학계열(전자, 전기, 기계, 신소재, 물리, 화학 등) 전공자",
+      "해외근무에 결격사유가 없는 자 (남성의 경우 병역필 또는 면제)"
+    ],
+    "preferences": [
+      "영어 또는 일본어 등 외국어 역량 우수자 우대",
+      "반도체 장비 및 반도체 공정에 대한 탄탄한 이해 보유자",
+      "직무 관련 자격증 또는 프로젝트 경험자"
+    ],
+    "process": "서류 접수(~10/18 24:00) → 인적성 검사 → 1차 면접 → 2차 면접 → 채용 검진 → 인턴십 입사 → 정규직 전환 평가",
+    "url": "https://tel.recruiter.co.kr/career/jobs/130160",
+    "sourceUrl": "https://tel.recruiter.co.kr/career/jobs/130160"
+  },
+  {
+    "id": 8,
+    "company": "(주)엘에이티 (LAT)",
+    "position": "반도체 및 디스플레이 장비 공정개발팀 모집 (신입)",
+    "department": "공정개발팀 / R&D",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "경기 수원시 권선구",
+    "employmentType": "신입 (정규직)",
+    "deadline": "2026-11-14 23:59",
+    "deadlineDate": "2026-11-14T23:59:59",
+    "deadlineHighlight": false,
+    "addedDate": "2026-10-15",
+    "tasks": [
+      "플라즈마 기반 반도체 및 디스플레이 건식 식각/애셔/세정 장비 공정 개발",
+      "고객사 타깃 공정 조건 도출, 신규 공정 레시피(Recipe) 개발 및 평가",
+      "장비 데모 및 공정 데이터 분석, 고객사 기술 대응 및 문제 해결"
+    ],
+    "requirements": [
+      "공학계열(전자, 전기, 반도체, 신소재, 물리, 화학 등) 4년제 대졸 이상 (신입)",
+      "플라즈마 및 반도체 공정에 대한 기본 지식 보유자"
+    ],
+    "preferences": [
+      "유관 전공 석사 학위자 우대",
+      "반도체/디스플레이 장비 공정 실습 또는 프로젝트 경험자",
+      "인근 거주자 우대"
+    ],
+    "process": "서류 접수(~11/14 23:59) → 1차/2차 면접 전형 → 채용 검진 → 최종 입사",
+    "url": "http://www.latplasma.com",
+    "sourceUrl": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55297473"
+  },
+  {
+    "id": 9,
+    "company": "한국세라믹기술원 (KICET)",
+    "position": "2026년도 제4분기 위촉직 채용 공고 (위촉연구원)",
+    "department": "AI융합·양자반도체·기후에너지·바이오 등 18개 연구분야",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "경남 진주(본원), 경기 부천, 경기 이천, 충북 청주 (분야별 상이)",
+    "employmentType": "계약직 (최대 2년 기간제 위촉연구원)",
+    "deadline": "2026-10-29 17:00",
+    "deadlineDate": "2026-10-29T17:00:00",
+    "deadlineHighlight": true,
+    "addedDate": "2026-10-15",
+    "tasks": [
+      "박막 증착·접착 연구, 반도체용 방열·차폐 세라믹 소재 개발 지원",
+      "반도체 박막 공정 기술 지원, 산화갈륨 박막소재 연구 및 특성평가",
+      "반도체 챔버 소재 및 소자 공정 기술 지원, HBM용 세라믹 소재 연구개발",
+      "소재 디지털트윈 AI 모델 개발 및 세라믹 소재 물성 분석·평가"
+    ],
+    "requirements": [
+      "분야별 학사 또는 석사 이상 학위 소지자 (2027년 2월 졸업예정자 포함)",
+      "세라믹, 신소재, 금속, 전자, 화학, 컴퓨터공학 등 이공계열 전공자",
+      "기술원 인사규정 결격사유에 해당하지 않는 자 (블라인드 채용)"
+    ],
+    "preferences": [
+      "위촉직 전일제 1호봉 기준 연 3,371만 원(세전, 과제별 상이)",
+      "비수도권 지역인재, 국가보훈대상자, 장애인 가점 부여",
+      "연구개발 실적(논문, 특허) 보유자 우대"
+    ],
+    "process": "공고 및 지원서 접수(10/15~10/29 17:00) → 서류전형(3배수, 11/20 발표) → 인성검사(11/23~12/4) → 면접전형(12/7~12/18, 온라인 10분 질의응답) → 최종 합격(12/24) → 임용(2027. 1. 21)",
+    "url": "https://kicet.recruiter.co.kr/career/jobs/131288",
+    "sourceUrl": "https://kicet.recruiter.co.kr/career/jobs/131288"
+  },
+  {
+    "id": 10,
+    "company": "한국세라믹기술원 (KICET)",
+    "position": "2026년도 제4분기 정규직 채용 공고 (연구직)",
+    "department": "첨단 세라믹 및 반도체·전자 소재 연구부서",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "경남 진주(본원), 충북 청주, 경기 이천·부천",
+    "employmentType": "정규직 (연구직)",
+    "deadline": "2026-10-29 17:00",
+    "deadlineDate": "2026-10-29T17:00:00",
+    "deadlineHighlight": true,
+    "addedDate": "2026-10-15",
+    "tasks": [
+      "산업통상부 산하 정부출연기관 첨단 세라믹 및 반도체 소재 국가 R&D 과제 총괄/수행",
+      "차세대 전력반도체/전자소재/에너지 세라믹 원천 기술 개발 및 특허 확보",
+      "산·학·연 협력 연구 기획 및 기술 이전/산업화 지원"
+    ],
+    "requirements": [
+      "해당 분야 석사 또는 박사 학위 소지자 (2027년 2월 취득예정자 포함)",
+      "세라믹공학, 신소재, 전자, 화공, 물리 등 유관 이공계열 전공자",
+      "기술원 인사규정상 결격사유가 없는 자 (블라인드 채용)"
+    ],
+    "preferences": [
+      "SCI(E)급 논문 제1저자 또는 주발명자 특허 실적 우수자",
+      "정부출연연구기관 또는 기업 연구소 R&D 프로젝트 수행 경험자"
+    ],
+    "process": "지원서 접수(10/15~10/29 17:00) → 서류심사 → 필기/인성검사 → 전공/종합면접 → 채용검진 → 최종 임용",
+    "url": "https://kicet.recruiter.co.kr/career/jobs/131253",
+    "sourceUrl": "https://kicet.recruiter.co.kr/career/jobs/131253"
+  },
+  {
+    "id": 11,
+    "company": "한국세라믹기술원 (KICET)",
+    "position": "2026년도 제4분기 체험형 인턴 채용 공고 (인턴연구원)",
+    "department": "소재 연구 및 시험분석 지원 부서",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "경남 진주(본원), 충북 청주, 경기 이천·부천",
+    "employmentType": "인턴 (체험형 청년인턴)",
+    "deadline": "2026-10-29 17:00",
+    "deadlineDate": "2026-10-29T17:00:00",
+    "deadlineHighlight": true,
+    "addedDate": "2026-10-15",
+    "tasks": [
+      "세라믹 및 반도체 소재 연구개발 실험 보조 및 시료 준비",
+      "소재 물성 분석 장비 운용 보조 및 시험 데이터 정리",
+      "연구과제 행정 및 연구 데이터베이스 구축 지원"
+    ],
+    "requirements": [
+      "청년고용촉진 특별법상 청년 연령(만 15세 이상 34세 이하)인 자",
+      "이공계열 대학 재학생, 휴학생 또는 졸업생",
+      "기술원 결격사유 없는 자"
+    ],
+    "preferences": [
+      "공공기관 청년인턴 근무를 통한 실무 연구 경험 희망자",
+      "이공계 세라믹/소재/화학/전자 관련 전공자 우대"
+    ],
+    "process": "지원서 접수(10/15~10/29 17:00) → 서류전형 → 면접전형 → 최종 합격 및 인턴십 근무",
+    "url": "https://kicet.recruiter.co.kr/career/jobs/131293",
+    "sourceUrl": "https://kicet.recruiter.co.kr/career/jobs/131293"
+  },
+  {
+    "id": 12,
+    "company": "Infinitesima (인피니테시마)",
+    "position": "Applications Engineer, Semiconductor Metrology / AFM",
+    "department": "Customer Operations & Applications (반도체 계측/AFM 응용팀)",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "경북 경주시 (고객사 사이트 근무, 출장 최대 50%, 해외 트레이닝 지원)",
+    "employmentType": "정규직 (Graduate to Senior level 모두 채용)",
+    "deadline": "채용시 마감 (수시 채용)",
+    "deadlineDate": "2026-12-31T23:59:59",
+    "deadlineHighlight": false,
+    "addedDate": "2026-10-15",
+    "tasks": [
+      "고속 원자간력현미경(AFM) 기반 반도체 나노스케일 3D 계측/검사 기술 지원",
+      "고객사(반도체 제조사) 웨이퍼 데모 측정, 공정 분석 및 계측 데이터 리포팅",
+      "고객사 기술 피드백 수렴, 신규 측정 레시피 최적화 및 본사 R&D팀 피드백",
+      "한국 및 일본 등 아시아 주요 반도체 고객사와의 기술 커뮤니케이션"
+    ],
+    "requirements": [
+      "AFM(원자현미경), SPM, 반도체 계측(Metrology) 또는 나노물리/나노계측 분야 지식 보유자",
+      "물리학, 전자공학, 재료공학 등 관련 이공계열 학사/석사/박사 학위자 (신입 졸업생부터 시니어까지 지원 가능)",
+      "비즈니스 영어 커뮤니케이션 역량 (다국적 팀 및 해외 고객사 협업)",
+      "국내외 출장(최대 50%) 및 유연한 현장 근무 가능자"
+    ],
+    "preferences": [
+      "주니어(신입급) 연봉 6,500만~8,000만원 / 일반 8,000만~1억 500만원 / 시니어 1억~1억 3,500만원",
+      "영국 본사 교육 및 글로벌 반도체 계측 장비 커리어 개발 기회 제공",
+      "반도체 팹(Fab) 환경 및 반도체 계측 장비 운영 경험자 우대"
+    ],
+    "process": "온라인 입사지원 → 서류 심사 → 기술/직무 인터뷰(영어) → 임원 인터뷰 → 최종 오퍼 및 입사",
+    "url": "https://job-boards.eu.greenhouse.io/infinitesima/jobs/5006426101",
+    "sourceUrl": "https://job-boards.eu.greenhouse.io/infinitesima/jobs/5006426101"
+  },
+  {
+    "id": 13,
+    "company": "한국광기술원 (KOPTI)",
+    "position": "2026년 하반기 일반직 공개채용 공고 (정규직)",
+    "department": "광융합 R&D / 초정밀 광학·반도체·센서",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "광주광역시 북구(본원), 경기 안양 등",
+    "employmentType": "정규직 (일반직)",
+    "deadline": "2026-10-30 17:00",
+    "deadlineDate": "2026-10-30T17:00:00",
+    "deadlineHighlight": true,
+    "addedDate": "2026-10-16",
+    "tasks": [
+      "초정밀 광학모듈 공정개발 및 광학계 설계",
+      "반도체·디스플레이 광융합 기술 연구개발",
+      "광의료·헬스케어 및 자율주행 광학 센서 기술개발"
+    ],
+    "requirements": [
+      "4년제 대졸 이상 (학사 이상)",
+      "물리, 화학, 재료, 전자, 기계 등 이공계열 전공자",
+      "공공기관 블라인드 채용 기준 결격사유 없는 자"
+    ],
+    "preferences": [
+      "모집분야 관련 석/박사 학위자 우대",
+      "광학계 설계 및 반도체 광융합 프로젝트 경험자"
+    ],
+    "process": "입사지원서 접수(~10/30 17:00) → 서류전형 → 필기시험/인적성 → 면접전형 → 채용검진 및 최종 임용",
+    "url": "https://kopti.recruiter.co.kr/career/jobs/131100",
+    "sourceUrl": "https://kopti.recruiter.co.kr/career/jobs/131100"
+  },
+  {
+    "id": 14,
+    "company": "한국광기술원 (KOPTI)",
+    "position": "2026년 제4차 계약직 공개채용 공고 (연구직/기술직/행정직)",
+    "department": "광기술 연구개발 / 시험분석 지원",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "광주광역시 북구 (본원)",
+    "employmentType": "계약직 (연구/기술/행정)",
+    "deadline": "2026-10-27 17:00",
+    "deadlineDate": "2026-10-27T17:00:00",
+    "deadlineHighlight": true,
+    "addedDate": "2026-10-16",
+    "tasks": [
+      "국책 R&D 프로젝트 연구 지원 및 광학 시험평가 장비 운용",
+      "광학 부품 특성 분석·측정 및 시험성적서 발급 지원",
+      "연구 과제 행정 및 품질관리 지원"
+    ],
+    "requirements": [
+      "모집 분야별 학사 또는 석사 이상 학위 소지자",
+      "국가공무원법 제33조 결격사유 없는 자"
+    ],
+    "preferences": [
+      "광학 분석 장비 운용 유경험자 우대",
+      "공공 연구과제 참여 경험자"
+    ],
+    "process": "입사지원서 접수(~10/27 17:00) → 서류전형 → 면접전형 → 채용검진 및 최종 합격",
+    "url": "https://kopti.recruiter.co.kr/career/jobs/130655",
+    "sourceUrl": "https://kopti.recruiter.co.kr/career/jobs/130655"
+  },
+  {
+    "id": 15,
+    "company": "한국기초과학지원연구원 (KBSI)",
+    "position": "2026년 제5차 기간제 및 제4차 연수직 공개채용",
+    "department": "첨단연구장비부 / 바이오·나노·이차전지 분석연구",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "충북 오창(오창센터), 대전(본원), 서울(수도권센터)",
+    "employmentType": "기간제 근로자 / 연수직(Post-Doc)",
+    "deadline": "2026-10-21 16:00",
+    "deadlineDate": "2026-10-21T16:00:00",
+    "deadlineHighlight": true,
+    "addedDate": "2026-10-16",
+    "tasks": [
+      "첨단 대형 연구장비(Cryo-EM, 초고분해능 NMR 등) 활용 바이오/나노 융합 연구",
+      "이차전지·반도체 첨단 분석 기술 지원 및 특성 평가",
+      "연구과제 관리 및 연구성과 기술사업화 지원"
+    ],
+    "requirements": [
+      "직무별 학사/석사/박사 학위 소지자 (블라인드 채용)",
+      "국가공무원법 결격사유 없는 자"
+    ],
+    "preferences": [
+      "대형 연구장비 운영 및 정밀 분석 경험자",
+      "관련 분야 논문 및 특허 실적 보유자 우대"
+    ],
+    "process": "온라인 원서접수(~10/21 16:00) → 서류전형 → 면접전형(발표/구술) → 최종 합격",
+    "url": "https://kbsi.fairy.im/announcement/detail/10",
+    "sourceUrl": "https://kbsi.fairy.im/announcement/detail/10"
+  },
+  {
+    "id": 16,
+    "company": "피에스케이 (PSK)",
+    "position": "10월 PEE 채용 전환형 인턴 모집",
+    "department": "PEE (Product Equipment Engineering)",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "경기 화성시, 평택시, 이천시, 충북 청주시",
+    "employmentType": "채용 전환형 인턴 (월 300만원, 정규직 전환 가능)",
+    "deadline": "2026-10-25 23:00",
+    "deadlineDate": "2026-10-25T23:00:00",
+    "deadlineHighlight": true,
+    "addedDate": "2026-10-16",
+    "tasks": [
+      "반도체 전공정 장비(PR Strip, Dry Cleaning 등) 설치 및 셋업",
+      "장비 개조/개선 및 공정/품질 기술 이슈 대응",
+      "고객사 반도체 FAB 라인 대응 및 장비 가동률 최적화"
+    ],
+    "requirements": [
+      "4년제 대졸 이상 (기졸업자 또는 졸업예정자)",
+      "반도체/전자/전기/기계/재료 등 이공계열 전공자",
+      "신입 지원 가능 (병역필 또는 면제자)"
+    ],
+    "preferences": [
+      "반도체 공정 및 장비 관련 교육 이수자",
+      "고객 지향적 커뮤니케이션 역량 우수자"
+    ],
+    "process": "서류접수(~10/25 23:00) → 인적성검사/AI역량검사 → 1차 실무면접 → 2차 임원면접 → 채용검진 및 인턴 입사",
+    "url": "https://psk.recruiter.co.kr/career/home",
+    "sourceUrl": "https://www.catch.co.kr/NCS/RecruitInfoDetails/576311"
+  },
+  {
+    "id": 17,
+    "company": "주성엔지니어링",
+    "position": "[수시채용] 2026년 10월 신입 Sales, Manager 직군 집중 채용 (IT 정보보안)",
+    "department": "경영지원 / IT(정보보안)",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "경기 용인시 기흥구 (용인 R&D센터)",
+    "employmentType": "정규직 (신입, 대졸 초임 4,940만원 이상)",
+    "deadline": "2026-10-21 14:59",
+    "deadlineDate": "2026-10-21T14:59:00",
+    "deadlineHighlight": true,
+    "addedDate": "2026-10-16",
+    "tasks": [
+      "사내 정보보안 인프라 구축 및 보안 시스템 운영",
+      "보안 취약점 진단 및 사이버 침해사고 대응",
+      "정보보호 관리체계 수립 및 보안 감사 대응"
+    ],
+    "requirements": [
+      "학사 이상 (컴퓨터공학/정보보안/소프트웨어 등 관련 전공)",
+      "신입 (입사 후 3개월 수습 적용)"
+    ],
+    "preferences": [
+      "정보보안기사 등 보안 관련 자격증 소지자",
+      "네트워크 및 시스템 보안 이해도 우수자"
+    ],
+    "process": "서류접수(~10/21 14:59) → 서류전형 → 면접전형 → 건강검진 및 최종 합격",
+    "url": "https://jusung.career.greetinghr.com/ko/o/239942",
+    "sourceUrl": "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/34462"
+  },
+  {
+    "id": 18,
+    "company": "스태츠칩팩코리아",
+    "position": "CS(Customer Service) 엔지니어 채용",
+    "department": "Customer Service / 고객기술대응",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "인천 중구(영종도)",
+    "employmentType": "정규직 (신입)",
+    "deadline": "2026-10-18 23:00",
+    "deadlineDate": "2026-10-18T23:00:00",
+    "deadlineHighlight": true,
+    "addedDate": "2026-10-16",
+    "tasks": [
+      "고객 요청 및 이슈 접수·관리, 고객 방문 의전 수행",
+      "고객과의 실시간 커뮤니케이션 및 대응",
+      "고객 요청 사항의 내부 공유 및 협업을 통한 문제 해결"
+    ],
+    "requirements": [
+      "학사 이상 (전자/전기/재료/반도체 등 관련 전공, 기졸업자 또는 27년 2월 졸업예정자)",
+      "학점 3.0/4.5 이상, 어학 토익스피킹 140점 또는 OPIc IH 이상 필수",
+      "영어 커뮤니케이션 가능자 및 MS Office 활용 가능자"
+    ],
+    "preferences": [
+      "고객 대응 또는 고객 커뮤니케이션 관련 업무 경험 보유자",
+      "고객 만족을 위한 책임감과 긍정적인 서비스 마인드 보유자"
+    ],
+    "process": "서류전형(~10/18 23:00) → 인적성 전형 → 실무/임원 면접(영어 면접 포함) → 결과 발표",
+    "url": "https://statschippac.jobagent.co.kr",
+    "sourceUrl": "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/34459"
+  },
+  {
+    "id": 19,
+    "company": "행복나래(SK계열사)",
+    "position": "2026년도 하반기 신입사원 공개채용 (IT / RPA 개발 및 운영)",
+    "department": "IT / RPA 개발 및 운영",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "서울 중구 (서소문로)",
+    "employmentType": "정규직 (신입)",
+    "deadline": "2026-10-18 23:59",
+    "deadlineDate": "2026-10-18T23:59:00",
+    "deadlineHighlight": true,
+    "addedDate": "2026-10-16",
+    "tasks": [
+      "RPA(A360, Automation Anywhere) 기반 자동화 과제 개발 및 Bot 운영/장애 대응",
+      "사내 시스템, SCM 구매시스템, 정산 시스템 개발 및 운영 (Java, Oracle, Spring Web)",
+      "자동화 대상 업무 프로세스 분석 및 고객사 시스템 연동 개발"
+    ],
+    "requirements": [
+      "4년제 대학교 학사 이상"
+    ],
+    "preferences": [
+      "컴퓨터·소프트웨어·데이터·AI 등 IT 관련 전공자 및 정보처리기사 등 자격 보유자",
+      "Java, Oracle, Spring Boot, Python 활용 경험 및 REST API 데이터 연계 경험자",
+      "RPA/IT 관련 교육 수료 또는 프로젝트 경험 보유자"
+    ],
+    "process": "서류접수(~10/18) → SKCT 전형(온라인, 10/31) → 면접전형(11월 중) → 채용검진 → 입사(12월 중)",
+    "url": "https://www.happynarae.com/happy2/connect/incruit.jsp",
+    "sourceUrl": "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/34415"
+  },
+  {
+    "id": 20,
+    "company": "KP그룹",
+    "position": "KP한석유화연구소 연구개발 신입/경력 채용",
+    "department": "KP한석유화 중앙연구소 / 합성·소재개발팀",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "울산 남구 / 경기 성남",
+    "employmentType": "정규직",
+    "deadline": "2026-10-18 23:59",
+    "deadlineDate": "2026-10-18T23:59:00",
+    "deadlineHighlight": true,
+    "addedDate": "2026-10-16",
+    "tasks": [
+      "고분자/특수화학 소재 합성 및 기능성 화학소재 개발",
+      "정밀화학 원료 물성 분석 및 신규 배합 기술 연구",
+      "고객사 맞춤형 케미컬 솔루션 기술지원 및 양산화 검증"
+    ],
+    "requirements": [
+      "학사 이상 (화학, 화학공학, 고분자공학 등 전공자)",
+      "화학 실험 및 분석 장비 운용 역량"
+    ],
+    "preferences": [
+      "석사 학위 소지자 우대",
+      "유기합성 또는 석유화학 소재 연구 프로젝트 경험자"
+    ],
+    "process": "서류접수(~10/18) → 서류전형 → 1차 면접 → 2차 임원 면접 → 최종 합격",
+    "url": "https://kpgroup.recruiter.co.kr/career/jobs/130358",
+    "sourceUrl": "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/34295"
+  },
+  {
+    "id": 21,
+    "company": "테스 (TES)",
+    "position": "FEM 기반 구조 해석 신입/경력사원 모집 (석사 이상)",
+    "department": "연구직군 / 구조 해석",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "경기 용인시 처인구 (TES 본사)",
+    "employmentType": "정규직 (신입/경력 무관)",
+    "deadline": "2026-10-18 14:59",
+    "deadlineDate": "2026-10-18T14:59:00",
+    "deadlineHighlight": true,
+    "addedDate": "2026-10-16",
+    "tasks": [
+      "FEM 기반 설계안 검토 및 개선안 도출",
+      "Code, Standard 기준 해석 수행",
+      "국내외 인허가 및 인증 대응"
+    ],
+    "requirements": [
+      "석사 이상 필수 (기계/항공/조선 등 구조 관련 전공자)",
+      "경력 무관, 주도적 문제 해결 능력 보유자"
+    ],
+    "preferences": [
+      "설계 S/W 사용 경험자 및 Project 수행 경험자",
+      "관련 학위, 논문, 특허 보유자"
+    ],
+    "process": "서류접수(~10/18 14:59) → 서류심사 → 면접전형 → 채용검진 및 최종 입사",
+    "url": "https://hites.career.greetinghr.com/ko/o/239182",
+    "sourceUrl": "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/34254"
+  },
+  {
+    "id": 22,
+    "company": "한화엔진",
+    "position": "2026 하반기 경력사원 공개 채용",
+    "department": "엔진설계 / 생산기술 / 품질보증 / 영업",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "경남 창원시 / 서울",
+    "employmentType": "정규직 (경력 5년 이상)",
+    "deadline": "2026-10-19 23:59",
+    "deadlineDate": "2026-10-19T23:59:00",
+    "deadlineHighlight": true,
+    "addedDate": "2026-10-16",
+    "tasks": [
+      "선박용 대형 디젤엔진 및 친환경 이중연료(DF/메탄올/암모니아) 엔진 설계",
+      "엔진 시운전 및 성능 시험 분석, 성능 개선",
+      "선박 엔진 품질 보증 체계 관리 및 선주/조선소 기술 대응"
+    ],
+    "requirements": [
+      "학사 이상 (경력 5년 이상)",
+      "기계공학, 조선해양공학, 전기전자 등 관련 전공자"
+    ],
+    "preferences": [
+      "선박 추진엔진 및 발전기 엔진 관련 프로젝트 수행자",
+      "친환경 연료 추진 엔진 기술 유경험자"
+    ],
+    "process": "서류접수(~10/19) → 서류심사 → 실무면접 → 임원면접 → 채용검진 및 최종 합격",
+    "url": "https://www.hanwhain.com",
+    "sourceUrl": "https://www.jobkorea.co.kr/Recruit/GI_Read/50044528"
+  },
+  {
+    "id": 23,
+    "company": "LT메탈",
+    "position": "공정개발(Target) 엔지니어 채용",
+    "department": "박막소재사업부 / 타겟공정개발팀",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "충북 진천 / 인천",
+    "employmentType": "정규직 (신입/경력)",
+    "deadline": "2026-10-20 23:59",
+    "deadlineDate": "2026-10-20T23:59:00",
+    "deadlineHighlight": true,
+    "addedDate": "2026-10-16",
+    "tasks": [
+      "반도체 및 디스플레이 스퍼터링 타겟(Target) 제조 공정개발",
+      "금속 분말 성형, 소결, 소성 가공 기술 최적화",
+      "스퍼터링 박막 코팅 품질 평가 및 고객사 물성 검증"
+    ],
+    "requirements": [
+      "학사 이상 (신소재공학, 금속공학, 재료공학 등 전공자)",
+      "금속 재료 및 박막 공정에 대한 기본 지식"
+    ],
+    "preferences": [
+      "스퍼터링 타겟 또는 분말야금 관련 실험/연구 경험자",
+      "금속 현미경 및 물성 분석 장비 활용 역량 보유자"
+    ],
+    "process": "서류접수(~10/20) → 서류전형 → 1차 면접 → 2차 면접 → 신체검사 및 최종 합격",
+    "url": "http://www.ltmetal.co.kr",
+    "sourceUrl": "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/34455"
+  },
+  {
+    "id": 24,
+    "company": "LT메탈",
+    "position": "연구개발(석사) 및 생산관리 채용",
+    "department": "중앙연구소(R&D) / 생산관리본부",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "충북 진천 / 경기 성남",
+    "employmentType": "정규직 (신입/경력)",
+    "deadline": "2026-10-20 23:59",
+    "deadlineDate": "2026-10-20T23:59:00",
+    "deadlineHighlight": true,
+    "addedDate": "2026-10-16",
+    "tasks": [
+      "본딩와이어, 접점소재, 전자소재 신제품 연구개발(석사)",
+      "생산계획 수립 및 공정 진도 관리, 라인 수율 향상(생산관리)",
+      "원부자재 수급 일정 관리 및 생산 현장 이슈 해결"
+    ],
+    "requirements": [
+      "학사 이상 (연구개발은 석사 이상 필수)",
+      "금속, 재료, 화학공학, 산업공학 등 전공자"
+    ],
+    "preferences": [
+      "귀금속 전자소재 연구 또는 스마트팩토리 생산관리 유경험자",
+      "데이터 분석 기반 공정 최적화 역량 보유자"
+    ],
+    "process": "서류접수(~10/20) → 서류전형 → 면접전형 → 채용검진 및 최종 합격",
+    "url": "http://www.ltmetal.co.kr",
+    "sourceUrl": "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/34300"
+  },
+  {
+    "id": 25,
+    "company": "삼화콘덴서공업",
+    "position": "설비보전팀, 선행개발팀(석사) 등 신입/경력 채용",
+    "department": "설비보전팀 / 선행개발팀(MLCC)",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "경기 용인시 처인구",
+    "employmentType": "정규직 (신입/경력)",
+    "deadline": "2026-10-25 23:59",
+    "deadlineDate": "2026-10-25T23:59:00",
+    "deadlineHighlight": true,
+    "addedDate": "2026-10-16",
+    "tasks": [
+      "설비보전팀: 콘덴서 생산 설비 사후보전 및 예방보전",
+      "선행개발팀: AI 서버향 박막 신규 소재 분석, MLCC 원자재/첨가제 소재 개발 및 신뢰성 평가"
+    ],
+    "requirements": [
+      "설비보전: 공학계열 학사 이상 필수 (석사 우대), TOEIC 700점 이상 필수",
+      "선행개발(신입): 신소재/재료/화공/전기전자 석사 이상 필수, TOEIC 700점 이상 필수"
+    ],
+    "preferences": [
+      "유전체 BT소재, 내부전극, 조성, MLCC 개발 경력 및 설비 보전 관련 전공자 우대",
+      "영어 능력 우수자 우대"
+    ],
+    "process": "서류,인적성전형(~10/25) → 1차면접 → 2차면접 → 채용검진 → 최종합격",
+    "url": "https://samwhacapacitor.applyin.co.kr/jobs/23215",
+    "sourceUrl": "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/34772"
+  },
+  {
+    "id": 26,
+    "company": "테크윙",
+    "position": "안전환경팀 신입/경력 채용",
+    "department": "안전환경팀",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "경기 안성시 / 화성 동탄",
+    "employmentType": "정규직",
+    "deadline": "2026-10-30 23:59",
+    "deadlineDate": "2026-10-30T23:59:00",
+    "deadlineHighlight": true,
+    "addedDate": "2026-10-16",
+    "tasks": [
+      "사업장 산업안전보건 및 중대재해 예방 관리체계 운영",
+      "위험성 평가 실시 및 법적 환경·안전 인허가 대응",
+      "반도체 검사장비 제조 공장 안전 교육 및 현장 점검"
+    ],
+    "requirements": [
+      "학사 이상 (안전공학, 환경공학, 보건학 등 전공자)",
+      "산업안전기사, 건설안전기사 또는 대기/수질환경기사 등 자격증 필수/우대"
+    ],
+    "preferences": [
+      "제조업 사업장 안전보건 관리 실무 유경험자",
+      "ISO 45001 / 14001 인증 심사 대응 경험자"
+    ],
+    "process": "서류접수(~10/30) → 서류전형 → 1차 면접 → 2차 임원면접 → 최종 합격",
+    "url": "https://techwing.careerlink.kr/jobs",
+    "sourceUrl": "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/34774"
+  },
+  {
+    "id": 27,
+    "company": "코아시아",
+    "position": "LED PKG개발 엔지니어 채용",
+    "department": "LED 사업부 / 패키지개발팀",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "경기 화성시 / 서울",
+    "employmentType": "정규직 (신입/경력)",
+    "deadline": "2026-11-07 23:59",
+    "deadlineDate": "2026-11-07T23:59:00",
+    "deadlineHighlight": false,
+    "addedDate": "2026-10-16",
+    "tasks": [
+      "차량용 및 전장용 LED 패키지 구조 설계 및 공정 개발",
+      "광학 시뮬레이션 및 신뢰성 평가(열해석, 광학특성 분석)",
+      "LED PKG 양산 공정 기술지원 및 수율 개선"
+    ],
+    "requirements": [
+      "학사 이상 (광학공학, 전자공학, 재료공학, 물리 등 전공자)",
+      "반도체 또는 LED 패키징 기술에 대한 이해"
+    ],
+    "preferences": [
+      "차량용 전장 LED 또는 반도체 패키지 개발 경험자",
+      "LightTools, Speos 등 광학 해석 툴 활용자"
+    ],
+    "process": "서류접수(~11/07) → 서류전형 → 1차 실무면접 → 2차 임원면접 → 최종 합격",
+    "url": "https://www.coasia.com",
+    "sourceUrl": "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/34784"
+  },
+  {
+    "id": 28,
+    "company": "네패스",
+    "position": "AI정보화파트, 반도체 QC파트 품질관리 담당자 채용",
+    "department": "AI정보화파트 / 반도체품질관리(QC)",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "충북 청주시(오창)",
+    "employmentType": "정규직 (신입/경력)",
+    "deadline": "채용시 마감 (수시 채용)",
+    "deadlineDate": "2026-12-31T23:59:59",
+    "deadlineHighlight": false,
+    "addedDate": "2026-10-16",
+    "tasks": [
+      "사내 AI/스마트팩토리 정보화 시스템 구축 및 데이터 분석(AI파트)",
+      "WLP/FOWLP 등 첨단 반도체 패키징 라인 수입/공정/출하 품질 검사(QC파트)",
+      "품질 불량 원인 분석 및 재발방지 대책 수립"
+    ],
+    "requirements": [
+      "학사 이상 (컴퓨터, 산업공학, 전자, 재료, 화학 등 전공자)",
+      "데이터 분석 및 품질 마인드 보유자"
+    ],
+    "preferences": [
+      "반도체 후공정 품질관리 또는 IT 시스템 구축 경험자"
+    ],
+    "process": "서류접수 → 서류심사 → 1차 면접 → 2차 임원면접 → 최종 합격",
+    "url": "https://careers.nepes.co.kr/",
+    "sourceUrl": "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/34050"
+  },
+  {
+    "id": 29,
+    "company": "리벨리온",
+    "position": "System Test Engineer 채용",
+    "department": "SW & System Engineering / Test & QA",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "경기 성남시 분당구(판교)",
+    "employmentType": "정규직",
+    "deadline": "채용시 마감 (수시 채용)",
+    "deadlineDate": "2026-12-31T23:59:59",
+    "deadlineHighlight": false,
+    "addedDate": "2026-10-16",
+    "tasks": [
+      "AI 반도체(NPU) 가속기 시스템 레벨 테스트 및 신뢰성 검증",
+      "서버 환경에서 PCIe 카드 및 드라이버/컴파일러 연동 자동화 테스트 구축",
+      "하드웨어 및 시스템 버그 추적 및 개발팀 피드백"
+    ],
+    "requirements": [
+      "학사 이상 (컴퓨터공학, 전자공학 등 전공자)",
+      "Python 또는 Bash 기반 자동화 스크립트 작성 역량",
+      "Linux 시스템 환경에 대한 높은 이해도"
+    ],
+    "preferences": [
+      "서버 하드웨어 테스트 및 PCIe 인터페이스 검증 유경험자",
+      "AI 프레임워크(PyTorch 등) 실행 및 벤치마킹 경험자"
+    ],
+    "process": "서류접수 → 코딩/직무 테스트 → 기술 면접 → 컬처핏 면접 → 최종 합격",
+    "url": "https://rebellions.career.greetinghr.com/ko/accelerate-your-career",
+    "sourceUrl": "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/34659"
+  },
+  {
+    "id": 30,
+    "company": "모빌린트",
+    "position": "H/W System Design Engineer, SoC Architect 등 채용",
+    "department": "H/W 개발본부 / SoC 설계팀",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "서울 강남구",
+    "employmentType": "정규직",
+    "deadline": "채용시 마감 (수시 채용)",
+    "deadlineDate": "2026-12-31T23:59:59",
+    "deadlineHighlight": false,
+    "addedDate": "2026-10-16",
+    "tasks": [
+      "고성능 엣지 AI NPU SoC 아키텍처 설계 및 분석",
+      "보드 레벨 하드웨어 시스템 회로 설계 및 고속 신호 무결성(SI/PI) 검증",
+      "FPGA 프로토타이핑 및 실리콘 검증"
+    ],
+    "requirements": [
+      "학사 이상 (전자공학, 컴퓨터공학 등 전공자)",
+      "Verilog, SystemVerilog 또는 회로 설계 툴 활용 역량"
+    ],
+    "preferences": [
+      "NPU, GPU, DSP 등 AI 프로세서 설계 경험자",
+      "고속 인터페이스(PCIe, LPDDR 등) 설계/검증 경험자"
+    ],
+    "process": "서류접수 → 직무 기술 인터뷰 → 컬처 인터뷰 → 최종 합격",
+    "url": "https://mobilinthire.career.greetinghr.com/ko/recruit",
+    "sourceUrl": "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/34046"
+  },
+  {
+    "id": 31,
+    "company": "몰로코 (Moloco)",
+    "position": "Software Engineer (머신러닝/인프라/백엔드)",
+    "department": "Engineering / Ad Tech",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "서울 강남구(테헤란로)",
+    "employmentType": "정규직",
+    "deadline": "채용시 마감 (수시 채용)",
+    "deadlineDate": "2026-12-31T23:59:59",
+    "deadlineHighlight": false,
+    "addedDate": "2026-10-16",
+    "tasks": [
+      "초당 수백만 건의 광고 입찰을 처리하는 초저지연 대규모 분산 시스템 개발",
+      "대용량 트래픽 데이터 파이프라인 및 머신러닝 서빙 인프라 구축",
+      "머신러닝 모델 서빙 성능 및 비용 최적화"
+    ],
+    "requirements": [
+      "학사 이상 (컴퓨터공학 등 관련 전공자)",
+      "Go, C++, Java, Python 중 하나 이상에 능숙한 분",
+      "자료구조, 알고리즘, 분산 시스템에 대한 견고한 이해"
+    ],
+    "preferences": [
+      "클라우드(GCP, AWS) 기반 대규모 트래픽 서비스 구축 경험자",
+      "글로벌 엔지니어링 팀 협업 역량"
+    ],
+    "process": "서류접수 → 온라인 코딩 테스트 → 기술 인터뷰 (시스템 디자인/알고리즘) → 컬처핏 면접 → 최종 오퍼",
+    "url": "https://www.moloco.com/ko/careers",
+    "sourceUrl": "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/34118"
+  },
+  {
+    "id": 32,
+    "company": "아마존웹서비시즈코리아 (AWS)",
+    "position": "Associate Delivery Consultant 채용",
+    "department": "AWS Professional Services (ProServe)",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "서울 강남구(역삼)",
+    "employmentType": "정규직 (신입/초기 경력)",
+    "deadline": "채용시 마감 (수시 채용)",
+    "deadlineDate": "2026-12-31T23:59:59",
+    "deadlineHighlight": false,
+    "addedDate": "2026-10-16",
+    "tasks": [
+      "국내 주요 엔터프라이즈 고객 대상 클라우드 마이그레이션 및 아키텍처 컨설팅",
+      "AWS 클라우드 네이티브 애플리케이션 및 인프라 설계/구축 기술 지원",
+      "고객 기술 과제 해결 및 모범 사례(Best Practices) 전파"
+    ],
+    "requirements": [
+      "학사 이상 기졸업자 또는 졸업 예정자",
+      "컴퓨터공학, 소프트웨어, 정보통신 등 관련 전공자",
+      "소프트웨어 개발 또는 클라우드 기초 지식 보유자"
+    ],
+    "preferences": [
+      "AWS Certified Solutions Architect 등 클라우드 자격증 보유자 우대",
+      "영어 및 한국어 커뮤니케이션 우수자"
+    ],
+    "process": "서류접수 → 온라인 평가 → 리더십 원칙(LP) 기반 기술/인성 인터뷰 → 최종 합격",
+    "url": "https://www.amazon.jobs",
+    "sourceUrl": "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/34665"
+  },
+  {
+    "id": 33,
+    "company": "엑시나 (Exina)",
+    "position": "SoC 개발 엔지니어 채용",
+    "department": "반도체 설계본부 / SoC팀",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "경기 성남시 판교",
+    "employmentType": "정규직",
+    "deadline": "채용시 마감 (수시 채용)",
+    "deadlineDate": "2026-12-31T23:59:59",
+    "deadlineHighlight": false,
+    "addedDate": "2026-10-16",
+    "tasks": [
+      "차세대 지능형 반도체 SoC 설계 및 로직 합성",
+      "SoC 버스 구조 설계(AMBA AXI/AHB) 및 주변 IP 연동/검증",
+      "FPGA 프로토타입 보드 검증 및 칩 브링업"
+    ],
+    "requirements": [
+      "학사 이상 (전자/전기/반도체/컴퓨터공학 전공)",
+      "Verilog HDL 또는 SystemVerilog 디지털 회로 설계 가능자"
+    ],
+    "preferences": [
+      "SoC 설계 프로젝트 유경험자",
+      "C/C++ 기반 임베디드 펌웨어 테스트 환경 구축 경험자"
+    ],
+    "process": "서류전형 → 1차 기술면접 → 2차 임원면접 → 최종 합격",
+    "url": "https://xcena.com/",
+    "sourceUrl": "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/33302"
+  },
+  {
+    "id": 34,
+    "company": "오토콘시스템",
+    "position": "반도체 장비 제어 프로그래머 채용",
+    "department": "SW개발팀 / 장비제어파트",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "경기 수원 / 화성",
+    "employmentType": "정규직",
+    "deadline": "채용시 마감 (수시 채용)",
+    "deadlineDate": "2026-12-31T23:59:59",
+    "deadlineHighlight": false,
+    "addedDate": "2026-10-16",
+    "tasks": [
+      "반도체 자동화 장비 GUI 및 모션 제어 소프트웨어 개발",
+      "모터/센서/통신(SECS/GEM, RS-232, TCP/IP) 인터페이스 제어",
+      "현장 장비 셋업 및 고객사 기술 이슈 지원"
+    ],
+    "requirements": [
+      "학사 이상 (컴퓨터, 제어계측, 전자, 기계 등 전공)",
+      "C#, C++, MFC 프로그래밍 가능자"
+    ],
+    "preferences": [
+      "반도체/디스플레이 장비 제어 소프트웨어 개발 경험자",
+      "SECS/GEM 통신 프로토콜 구현 경험자"
+    ],
+    "process": "서류전형 → 면접전형 → 채용검진 및 입사",
+    "url": "https://autoconsystem.co.kr/",
+    "sourceUrl": "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/33429"
+  },
+  {
+    "id": 35,
+    "company": "인피니언테크놀로지스코리아",
+    "position": "Automotive Radar Validation 엔지니어 채용",
+    "department": "Automotive R&D / Radar Verification",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "서울 강남구(삼성동)",
+    "employmentType": "정규직",
+    "deadline": "채용시 마감 (수시 채용)",
+    "deadlineDate": "2026-12-31T23:59:59",
+    "deadlineHighlight": false,
+    "addedDate": "2026-10-16",
+    "tasks": [
+      "차량용 77GHz/79GHz 레이더 센서 반도체 RF/믹스드시그널 검증",
+      "레이더 칩셋 테스트 벤치 구축 및 성능 파라미터 측정",
+      "국내 주요 완성차 및 Tier-1 고객사 기술 지원"
+    ],
+    "requirements": [
+      "학사 이상 (전자/전파공학/통신공학 전공)",
+      "RF 및 고주파 계측기(오실로스코프, 스펙트럼 분석기 등) 활용 가능자",
+      "영어 커뮤니케이션 가능자"
+    ],
+    "preferences": [
+      "차량용 반도체 규격(AEC-Q100, ISO 26262) 이해자",
+      "Python/MATLAB 기반 자동 측정 툴 개발 경험자"
+    ],
+    "process": "온라인 지원 → 서류 심사 → 실무 기술 면접(영어) → 인성 면접 → 최종 합격",
+    "url": "https://www.infineon.com/cms/en/careers/",
+    "sourceUrl": "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/34047"
+  },
+  {
+    "id": 36,
+    "company": "일레븐전자",
+    "position": "반도체 패키징/품질 데이터 분석 엔지니어 채용",
+    "department": "품질보증팀 / 데이터분석파트",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "경기 성남시 / 평택",
+    "employmentType": "정규직",
+    "deadline": "채용시 마감 (수시 채용)",
+    "deadlineDate": "2026-12-31T23:59:59",
+    "deadlineHighlight": false,
+    "addedDate": "2026-10-16",
+    "tasks": [
+      "반도체 패키징 수율 및 불량 데이터 통계 분석",
+      "공정 산포 개선 및 품질 보증 데이터 파이프라인 운영",
+      "고객 품질 리포트 작성 및 이상 징후 조기 탐지"
+    ],
+    "requirements": [
+      "학사 이상 (통계학, 산업공학, 전자, 재료공학 전공)",
+      "Python, R, SQL 또는 Minitab 데이터 분석 가능자"
+    ],
+    "preferences": [
+      "반도체 제조/패키징 공정 데이터 분석 경험자"
+    ],
+    "process": "서류전형 → 1차 면접 → 2차 임원면접 → 최종 합격",
+    "url": "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/34471",
+    "sourceUrl": "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/34471"
+  },
+  {
+    "id": 37,
+    "company": "파네시아 (Panmnesia)",
+    "position": "하드웨어 엔지니어 (CXL Controller / RTL 설계)",
+    "department": "HW Engineering / CXL IP팀",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "대전 유성구 / 서울 강남",
+    "employmentType": "정규직",
+    "deadline": "채용시 마감 (수시 채용)",
+    "deadlineDate": "2026-12-31T23:59:59",
+    "deadlineHighlight": false,
+    "addedDate": "2026-10-16",
+    "tasks": [
+      "차세대 CXL(Compute Express Link) 컨트롤러 RTL 로직 설계",
+      "메모리 풀링 및 확장 시스템 아키텍처 구현 및 검증",
+      "FPGA 프로토타이핑 및 ASIC 테이프아웃 지원"
+    ],
+    "requirements": [
+      "학사 이상 (전자공학, 컴퓨터공학 등 전공)",
+      "Verilog/SystemVerilog RTL 설계 및 시뮬레이션 가능자"
+    ],
+    "preferences": [
+      "CXL, PCIe, AXI 프로토콜에 대한 지식 보유자",
+      "고성능 컴퓨터 구조 및 메모리 시스템 연구 경험자"
+    ],
+    "process": "서류접수 → 기술 코딩/면접 → 심층 인터뷰 → 최종 합격",
+    "url": "https://panmnesia.com/careers_kr/",
+    "sourceUrl": "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/33309"
+  },
+  {
+    "id": 38,
+    "company": "파크시스템스",
+    "position": "ISE 개발, 기계 설계 등 신입/경력 채용",
+    "department": "R&D본부 / ISE개발팀 / 기계설계팀",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "경기 수원시 영통구(광교)",
+    "employmentType": "정규직",
+    "deadline": "채용시 마감 (수시 채용)",
+    "deadlineDate": "2026-12-31T23:59:59",
+    "deadlineHighlight": false,
+    "addedDate": "2026-10-16",
+    "tasks": [
+      "원자간력현미경(AFM) 나노 계측 장비 정밀 기계 구조 설계",
+      "장비 인터페이스(ISE) 및 정밀 스테이지 구동 기구 메커니즘 개발",
+      "진동 및 열변형 최소화 초정밀 계측 시스템 최적화"
+    ],
+    "requirements": [
+      "학사 이상 (기계공학, 정밀기계, 물리학 등 전공)",
+      "3D CAD(SolidWorks 등) 정밀 기구 설계 역량 보유자"
+    ],
+    "preferences": [
+      "반도체 검사/계측 장비 정밀 기구 설계 경험자",
+      "초정밀 스테이지 및 모션 제어 기구 메커니즘 이해자"
+    ],
+    "process": "서류전형 → 1차 실무진 면접 → 2차 임원 면접 → 채용검진 및 최종 합격",
+    "url": "https://www.parksystems.com/kr/company/career",
+    "sourceUrl": "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/33568"
+  },
+  {
+    "id": 39,
+    "company": "하이퓨리티",
+    "position": "기계설계, 기술개발, CS엔지니어 등 채용",
+    "department": "기술본부 / 설계·CS팀",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "경기 화성시 / 평택",
+    "employmentType": "정규직",
+    "deadline": "채용시 마감 (수시 채용)",
+    "deadlineDate": "2026-12-31T23:59:59",
+    "deadlineHighlight": false,
+    "addedDate": "2026-10-16",
+    "tasks": [
+      "반도체 초순수 및 고순도 가스/약액 공급 장치 기계 배관 설계",
+      "현장 고객사 장비 셋업, 배관 클린룸 시공 및 CS 기술 대응",
+      "공급 시스템 밸브 및 유체 제어 장치 신뢰성 평가"
+    ],
+    "requirements": [
+      "학사 이상 (기계공학, 화학공학, 환경공학 등 전공자)",
+      "도면 해독 및 CAD 도면 작업 가능자"
+    ],
+    "preferences": [
+      "반도체 배관/유체 설비 관련 유경험자",
+      "유관 자격증(일반기계기사, 가스기사 등) 소지자"
+    ],
+    "process": "서류전형 → 실무면접 → 임원면접 → 최종 합격",
+    "url": "https://hipurity.career.greetinghr.com/ko/intro",
+    "sourceUrl": "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/32208"
+  },
+  {
+    "id": 40,
+    "company": "한양디지텍",
+    "position": "메모리 R&D, 전략사업그룹 등 채용",
+    "department": "R&D 연구소 / 전략기획팀",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "경기 평택시",
+    "employmentType": "정규직",
+    "deadline": "채용시 마감 (수시 채용)",
+    "deadlineDate": "2026-12-31T23:59:59",
+    "deadlineHighlight": false,
+    "addedDate": "2026-10-16",
+    "tasks": [
+      "서버 및 PC용 메모리 모듈(DDR5, SSD 등) SMT 제조 공정기술 및 연구개발",
+      "신규 메모리 폼팩터 기술 검토 및 신뢰성 테스트",
+      "고객사 승인용 샘플 제작 및 양산성 검증"
+    ],
+    "requirements": [
+      "학사 이상 (전자공학, 반도체공학, 컴퓨터 등 전공자)",
+      "메모리 반도체 및 PCB 회로에 대한 기본 지식"
+    ],
+    "preferences": [
+      "SMT 표면실장 공정 및 메모리 모듈 테스트 경험자"
+    ],
+    "process": "서류전형 → 면접전형 → 채용검진 및 입사",
+    "url": "http://www.hydigitech.com",
+    "sourceUrl": "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/33516"
+  },
+  {
+    "id": 41,
+    "company": "ASM코리아",
+    "position": "Field Software Engineer 채용",
+    "department": "Global Field Operations / Software",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "경기 화성시(동탄)",
+    "employmentType": "정규직",
+    "deadline": "채용시 마감 (수시 채용)",
+    "deadlineDate": "2026-12-31T23:59:59",
+    "deadlineHighlight": false,
+    "addedDate": "2026-10-16",
+    "tasks": [
+      "ALD(원자층증착) 반도체 장비 소프트웨어 설치, 업그레이드 및 트러블슈팅",
+      "고객사 FAB 현장 소프트웨어 로그 분석 및 버그 수정 패치 적용",
+      "글로벌 R&D 소프트웨어 엔지니어링 팀과의 기술 협업"
+    ],
+    "requirements": [
+      "학사 이상 (컴퓨터공학, 전자공학, 소프트웨어 등 전공자)",
+      "C/C++, Linux OS 환경 및 네트워크 기본 지식 보유자",
+      "영어 회화 및 기술 문서 작성 가능자"
+    ],
+    "preferences": [
+      "반도체 장비 소프트웨어 또는 산업용 제어 시스템 경험자"
+    ],
+    "process": "온라인 지원 → 서류 심사 → 기술 인터뷰(영어) → 인성 면접 → 최종 합격",
+    "url": "https://careers.asm.com",
+    "sourceUrl": "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/34418"
+  },
+  {
+    "id": 42,
+    "company": "KSM",
+    "position": "품질보증 엔지니어 채용",
+    "department": "품질보증본부 / QA파트",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "경기 김포시",
+    "employmentType": "정규직",
+    "deadline": "채용시 마감 (수시 채용)",
+    "deadlineDate": "2026-12-31T23:59:59",
+    "deadlineHighlight": false,
+    "addedDate": "2026-10-16",
+    "tasks": [
+      "반도체 장비용 메탈벨로우즈 및 정밀 실링 부품 품질 보증 체계 관리",
+      "공정 불량 분석, 부적합품 관리 및 시정조치(CAPA) 운영",
+      "글로벌 반도체 장비 고객사 품질 오딧 대응"
+    ],
+    "requirements": [
+      "학사 이상 (기계공학, 신소재공학, 산업공학 등 전공자)",
+      "품질 관리 기법 및 정밀 측정에 대한 이해"
+    ],
+    "preferences": [
+      "정밀 기계 부품 또는 반도체 부품 품질 실무 경험자",
+      "품질경영기사 자격증 소지자"
+    ],
+    "process": "서류접수 → 서류전형 → 면접전형 → 채용검진 및 최종 합격",
+    "url": "https://www.ksm.co.kr",
+    "sourceUrl": "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/33592"
+  },
+  {
+    "id": 43,
+    "company": "LG AI연구원",
+    "position": "AI for Chemistry Research Scientist 채용 (석사 이상)",
+    "department": "Applied AI Research Lab / Materials & Chemistry",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "서울 강서구 마곡(LG사이언스파크)",
+    "employmentType": "정규직 (연구원)",
+    "deadline": "채용시 마감 (수시 채용)",
+    "deadlineDate": "2026-12-31T23:59:59",
+    "deadlineHighlight": false,
+    "addedDate": "2026-10-16",
+    "tasks": [
+      "생성형 AI 및 분자 시뮬레이션 기반 신소재/배터리/신약 분자 구조 설계 모델 연구",
+      "화학/재료 도메인 특화 대형 생성 모델(Foundation Model) 연구개발",
+      "최신 AI 연구 논문 출판(NeurIPS, ICML, Nature 등) 및 계열사 기술 적용"
+    ],
+    "requirements": [
+      "석사 이상 학위 소지자 (컴퓨터공학, 화학, 재료공학, 물리학 등 전공자)",
+      "Deep Learning 기반 화학/소재 모델링 연구 실적(논문 등) 보유자",
+      "Python 및 PyTorch 능숙자"
+    ],
+    "preferences": [
+      "박사 학위 소지자 우대",
+      "Graph Neural Networks(GNN), Diffusion 모델 연구 경험자"
+    ],
+    "process": "서류접수 → 1차 기술/논문 발표 면접 → 2차 컬처 면접 → 최종 합격",
+    "url": "https://www.lgresearch.ai/careers",
+    "sourceUrl": "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/34083"
+  },
+  {
+    "id": 44,
+    "company": "McKinsey & Company",
+    "position": "Data Engineer 채용",
+    "department": "QuantumBlack, AI by McKinsey",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "서울 중구(페럼타워)",
+    "employmentType": "정규직",
+    "deadline": "채용시 마감 (수시 채용)",
+    "deadlineDate": "2026-12-31T23:59:59",
+    "deadlineHighlight": false,
+    "addedDate": "2026-10-16",
+    "tasks": [
+      "국내외 대기업 디지털 전환 프로젝트를 위한 엔터프라이즈 데이터 아키텍처 구축",
+      "대규모 배치/실시간 데이터 파이프라인(ETL/ELT) 설계 및 개발",
+      "데이터 거버넌스, 품질 관리 및 머신러닝 엔지니어 협업 지원"
+    ],
+    "requirements": [
+      "학사 이상 (컴퓨터과학, 소프트웨어공학, 산업공학 등 전공자)",
+      "Python, SQL 및 클라우드(AWS/GCP/Azure) 기반 데이터 엔지니어링 역량",
+      "영어 및 한국어 커뮤니케이션 능통자"
+    ],
+    "preferences": [
+      "Spark, Airflow, dbt, Snowflake, Databricks 활용 경험자",
+      "글로벌 비즈니스 컨설팅 마인드 보유자"
+    ],
+    "process": "서류접수 → 온라인 코딩/데이터 평가 → 1차 기술 인터뷰 → 2차 케이스 및 리더십 인터뷰 → 오퍼",
+    "url": "https://www.mckinsey.com/careers",
+    "sourceUrl": "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/34007"
+  },
+  {
+    "id": 45,
+    "company": "Qualcomm Korea (퀄컴)",
+    "position": "On-device AgenticAI 연구개발 (석사 이상)",
+    "department": "Qualcomm AI Research / On-device AI Lab",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "서울 강남구(역삼)",
+    "employmentType": "정규직 (연구원)",
+    "deadline": "채용시 마감 (수시 채용)",
+    "deadlineDate": "2026-12-31T23:59:59",
+    "deadlineHighlight": false,
+    "addedDate": "2026-10-16",
+    "tasks": [
+      "스냅드래곤(Snapdragon) NPU 기반 On-device 소형 언어 모델(sLLM) 및 에이전트 AI 최적화",
+      "에이전트 행동 추론, 메모리 관리, 도구 호출(Tool Calling) 경량화 연구",
+      "모바일/PC 디바이스용 저전력 신경망 경량화/양자화(Quantization/Pruning) 기술 개발"
+    ],
+    "requirements": [
+      "석사 이상 학위 소지자 (컴퓨터공학, 인공지능, 전기전자 등 전공자)",
+      "LLM 아키텍처 및 딥러닝 프레임워크(PyTorch, ONNX 등) 깊은 이해",
+      "C++ 및 Python 프로그래밍 역량, 영어 의사소통 가능자"
+    ],
+    "preferences": [
+      "On-device AI 실행 또는 NPU/GPU 가속 프로젝트 경험자",
+      "AI 에이전트 시스템 또는 런타임 최적화 연구 논문 실적 보유자"
+    ],
+    "process": "글로벌 지원 사이트 접수 → 서류 심사 → 기술/코딩 인터뷰 → 심층 기술 발표 면접 → 최종 합격",
+    "url": "https://careers.qualcomm.com",
+    "sourceUrl": "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/34049"
+  },
+  {
+    "id": 46,
+    "company": "Texas Instruments (TI Korea)",
+    "position": "Applications Engineer Program (AEP) 채용",
+    "department": "Field Applications / Analog & Embedded Solutions",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "서울 강남구(삼성동)",
+    "employmentType": "정규직 (신입 프로그램)",
+    "deadline": "채용시 마감 (수시 채용)",
+    "deadlineDate": "2026-12-31T23:59:59",
+    "deadlineHighlight": false,
+    "addedDate": "2026-10-16",
+    "tasks": [
+      "TI 아날로그 IC(전원 관리, 센서, 신호 증폭기) 및 임베디드 프로세서 고객 기술 지원",
+      "고객 회로도 검토, 레퍼런스 디자인 제작 및 오실로스코프 기반 시스템 디버깅",
+      "국내 주요 자동차, 전자, 산업용 고객사 대상 신제품 기술 세미나 및 프로모션"
+    ],
+    "requirements": [
+      "학사 이상 기졸업자 또는 졸업 예정자 (전자/전기공학 전공 필수)",
+      "아날로그 및 디지털 회로 이론에 대한 견고한 이해",
+      "원활한 영어 및 한국어 커뮤니케이션 가능자"
+    ],
+    "preferences": [
+      "회로 설계 프로젝트 및 벤치 계측 장비 실습 경험자",
+      "도전적이고 대인 소통 역량이 우수한 인재"
+    ],
+    "process": "온라인 지원 → 서류 심사 → 직무/적성 평가 → 1차 테크니컬 인터뷰 → 2차 컬처핏 인터뷰 → 최종 합격",
+    "url": "https://careers.ti.com",
+    "sourceUrl": "https://egongmoya.letuin.com/CommunityBoard/view/2026/11/34037"
+  },
+  {
+    "id": 47,
+    "company": "SK실트론",
+    "position": "Metrology & Inspection Tool 엔지니어 사무직 경력 수시 채용 (청주공장)",
+    "department": "제조 / 공정기술팀 (청주공장)",
+    "status": "서류준비중",
+    "hidden": false,
+    "location": "충북 청주시 흥덕구 (청주공장)",
+    "employmentType": "정규직 (경력)",
+    "deadline": "2026-11-01 23:59",
+    "deadlineDate": "2026-11-01T23:59:00",
+    "deadlineHighlight": false,
+    "addedDate": "2026-10-19",
+    "tasks": [
+      "반도체용 Wafer 계측 장비 운영 관리 (Recipe 관리 및 SPC)",
+      "반도체용 Wafer 계측 장비 성능 및 신뢰성 개선",
+      "반도체용 Wafer 계측 장비 신규 기술 검토 및 공정 Set-up"
+    ],
+    "requirements": [
+      "4년제 대학교 학사 이상",
+      "계측 장비 운영 및 H/W 정비에 대한 이해와 지식 보유자",
+      "Metrology & Inspection 장비 관련 전자/전기 및 광학부 이해 역량"
+    ],
+    "preferences": [
+      "최소 3년 이상 Wafer 또는 반도체 계측 장비 운영/정비 경력자",
+      "Particle counter, Flatness 측정기, Edge 결함 측정기 유경험자",
+      "계측 장비 신규 도입 셋업 및 고장분석 경험자"
+    ],
+    "process": "서류접수(~11/01 23:59) → SKCT(인성) → 면접전형 → 채용검진 및 최종 입사",
+    "url": "https://www.skcareers.com/Recruit/Detail/R262228",
+    "sourceUrl": "https://m.jobkorea.co.kr/info/app_down.asp?Gno=50170152"
+  }
+]
