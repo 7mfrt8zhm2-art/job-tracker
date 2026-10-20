@@ -1,1 +1,6 @@
+.env
+pending_jobs.json
+last_sync_status.json
+sync_daemon.log
+__pycache__/
 .DS_Store

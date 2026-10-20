@@ -405,6 +405,41 @@
     .sync-badge.online .sync-dot { background: #22c55e; box-shadow: 0 0 6px #22c55e; }
     .sync-badge.online { background: #f0fdf4; border-color: #bbf7d0; color: #166534; }
     .sync-badge.offline .sync-dot { background: #f59e0b; }
+
+    /* 상단 실시간 등록 알림 배너 */
+    .top-alert-banner {
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: #dcfce7;
+      border: 1px solid #86efac;
+      color: #166534;
+      padding: 14px 18px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(22, 101, 52, 0.08);
+      animation: slideDownBanner 0.25s ease-out;
+    }
+    .top-alert-banner.show {
+      display: flex;
+    }
+    .top-alert-close {
+      background: transparent;
+      border: none;
+      color: #166534;
+      font-size: 16px;
+      cursor: pointer;
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+    .top-alert-close:hover { background: rgba(22, 101, 52, 0.1); }
+    @keyframes slideDownBanner {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
   <!-- Firebase SDK -->
   <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
@@ -412,6 +447,10 @@
 </head>
 <body>
   <div class="container">
+    <div id="top-alert-banner" class="top-alert-banner">
+      <span id="top-alert-text">✅ 새 공고가 실시간 등록되었습니다!</span>
+      <button class="top-alert-close" onclick="document.getElementById('top-alert-banner').classList.remove('show')" title="닫기">✕</button>
+    </div>
     <header>
       <div class="title-group">
         <h1>채용 공고 트래커</h1>
@@ -1007,8 +1046,176 @@
       }).join('');
     }
 
+    // 🚀 URL 파라미터(?action=upsert&data=Base64JSON) 자동 파싱 및 디코딩
+    let pendingUrlUpsertItems = null;
+
+    function showTopAlertBanner(message) {
+      const banner = document.getElementById('top-alert-banner');
+      const textEl = document.getElementById('top-alert-text');
+      if (banner && textEl) {
+        textEl.textContent = message || '✅ 새 공고가 실시간 등록되었습니다!';
+        banner.classList.add('show');
+        setTimeout(() => banner.classList.remove('show'), 8000);
+      }
+      showToast(message || '✅ 새 공고가 실시간 등록되었습니다!');
+    }
+
+    function extractPendingUrlUpsert() {
+      try {
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('action') !== 'upsert') return null;
+        const rawData = params.get('data');
+        if (!rawData) return null;
+
+        // URL-safe Base64 및 공백(+) 보정 후 UTF-8 디코딩
+        let b64 = rawData.trim().replace(/ /g, '+').replace(/-/g, '+').replace(/_/g, '/');
+        while (b64.length % 4 !== 0) {
+          b64 += '=';
+        }
+        const binaryStr = atob(b64);
+        const bytes = Uint8Array.from(binaryStr, c => c.charCodeAt(0));
+        const jsonStr = new TextDecoder('utf-8').decode(bytes);
+        const parsed = JSON.parse(jsonStr);
+        const items = (Array.isArray(parsed) ? parsed : [parsed]).filter(
+          item => item && (item.company || item.position)
+        );
+
+        // 주소창 파라미터 즉시 제거 (새로고침 시 중복 실행 방지)
+        const cleanUrl = window.location.pathname + window.location.hash;
+        window.history.replaceState({}, document.title, cleanUrl);
+
+        return items.length > 0 ? items : null;
+      } catch (err) {
+        console.error('Failed to decode URL upsert parameter:', err);
+        showToast('⚠️ URL 파라미터 공고 데이터 디코딩에 실패했습니다.');
+        return null;
+      }
+    }
+
+    // URL 파라미터로 전달된 공고 배열을 기존 목록에 병합(중복 시 업데이트, 신규면 ID 부여 후 추가)
+    function mergeIncomingUpsertJobs(incomingItems, currentList, currentMaxId) {
+      let maxId = currentMaxId;
+      const updatedList = [...currentList];
+      let addedCount = 0;
+      let updatedCount = 0;
+
+      incomingItems.forEach(newItem => {
+        if (!newItem) return;
+        const newSig = getJobSignature(newItem);
+        const newUrlClean = String(newItem.url || '').trim().replace(/\/$/, '');
+        const newCompClean = String(newItem.company || '').replace(/\s+/g, '').toLowerCase();
+
+        const matchIdx = updatedList.findIndex(existing => {
+          if (!existing) return false;
+          if (newItem.id && existing.id && Number(existing.id) === Number(newItem.id)) return true;
+          if (newSig !== '::' && getJobSignature(existing) === newSig) return true;
+          const existUrlClean = String(existing.url || '').trim().replace(/\/$/, '');
+          const existCompClean = String(existing.company || '').replace(/\s+/g, '').toLowerCase();
+          if (newUrlClean && existUrlClean && newUrlClean === existUrlClean && newCompClean === existCompClean) {
+            return true;
+          }
+          return false;
+        });
+
+        if (matchIdx >= 0) {
+          const existing = updatedList[matchIdx];
+          const preservedId = existing.id;
+          const preservedStatus = normalizeStatusValue(existing.status || '서류준비중');
+          const preservedHidden = Boolean(existing.hidden);
+          const preservedOverride = Boolean(existing.manualStatusOverride);
+
+          updatedList[matchIdx] = {
+            ...existing,
+            ...newItem,
+            id: preservedId,
+            status: preservedStatus,
+            hidden: preservedHidden,
+            ...(preservedOverride ? { manualStatusOverride: true } : {})
+          };
+          updatedCount += 1;
+        } else {
+          maxId += 1;
+          const todayStr = new Date().toISOString().slice(0, 10);
+          updatedList.push({
+            company: newItem.company || '기업명 미상',
+            position: newItem.position || '채용 공고',
+            department: newItem.department || '',
+            status: normalizeStatusValue(newItem.status || '서류준비중'),
+            hidden: Boolean(newItem.hidden),
+            location: newItem.location || '',
+            employmentType: newItem.employmentType || '정규직',
+            deadline: newItem.deadline || '채용시 마감',
+            deadlineDate: newItem.deadlineDate || '2026-12-31T23:59:59',
+            deadlineHighlight: Boolean(newItem.deadlineHighlight),
+            addedDate: newItem.addedDate || todayStr,
+            tasks: Array.isArray(newItem.tasks) ? newItem.tasks : [],
+            requirements: Array.isArray(newItem.requirements) ? newItem.requirements : [],
+            preferences: Array.isArray(newItem.preferences) ? newItem.preferences : [],
+            process: newItem.process || '서류전형 → 면접전형 → 최종합격',
+            url: newItem.url || '',
+            sourceUrl: newItem.sourceUrl || newItem.url || '',
+            id: maxId
+          });
+          addedCount += 1;
+        }
+      });
+
+      return { list: updatedList, maxId, addedCount, updatedCount };
+    }
+
+    // 헤드리스 브라우저/크롤러 호출 시에도 0.1초 만에 확실히 저장되도록 REST API 직접 전송 병행
+    async function fastRestUpsertIfNeeded(items) {
+      if (!items || items.length === 0) return;
+      try {
+        const dbUrl = firebaseConfig.databaseURL.replace(/\/$/, '');
+        const [jobsRes, delRes, maxRes] = await Promise.all([
+          fetch(`${dbUrl}/jobPostings.json`, { cache: 'no-store' }),
+          fetch(`${dbUrl}/deletedJobIds.json`, { cache: 'no-store' }),
+          fetch(`${dbUrl}/syncedMaxId.json`, { cache: 'no-store' })
+        ]);
+        const rawJobs = jobsRes.ok ? await jobsRes.json() : [];
+        const rawDel = delRes.ok ? await delRes.json() : [];
+        const rawMax = maxRes.ok ? await maxRes.json() : 0;
+
+        if (Array.isArray(rawDel)) rawDel.forEach(id => deletedJobIds.add(Number(id)));
+        else if (rawDel && typeof rawDel === 'object') Object.values(rawDel).forEach(id => deletedJobIds.add(Number(id)));
+
+        let baseList = Array.isArray(rawJobs)
+          ? rawJobs.filter(Boolean)
+          : (rawJobs && typeof rawJobs === 'object' ? Object.values(rawJobs).filter(Boolean) : []);
+        baseList = baseList.filter(j => j && !j.deleted && !deletedJobIds.has(Number(j.id)));
+
+        const baseMaxId = Math.max(
+          Number(rawMax || 0),
+          ...baseList.map(j => Number(j.id || 0)),
+          ...backupJobPostings.map(j => Number(j.id || 0))
+        );
+
+        const merged = mergeIncomingUpsertJobs(items, baseList, baseMaxId);
+        await Promise.all([
+          fetch(`${dbUrl}/jobPostings.json`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(merged.list)
+          }),
+          fetch(`${dbUrl}/syncedMaxId.json`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(merged.maxId)
+          })
+        ]);
+      } catch (e) {
+        console.warn('Fast REST upsert fallback warning:', e);
+      }
+    }
+
     // 백업 JSON 로드 및 Firebase 실시간 리스너 초기화
     async function initTracker() {
+      pendingUrlUpsertItems = extractPendingUrlUpsert();
+      if (pendingUrlUpsertItems) {
+        fastRestUpsertIfNeeded(pendingUrlUpsertItems);
+      }
+
       try {
         const res = await fetch('./jobs_backup.json', { cache: 'no-store' });
         if (res.ok) {
@@ -1059,7 +1266,7 @@
             list = Object.values(data).filter(Boolean);
           }
 
-          if (list.length > 0) {
+          if (list.length > 0 || pendingUrlUpsertItems) {
             const maxIdInList = list.reduce((max, j) => Math.max(max, Number(j.id || 0)), 0);
             const effectiveSyncedMaxId = cloudSyncedMaxId > 0 ? cloudSyncedMaxId : maxIdInList;
 
@@ -1083,11 +1290,22 @@
               needsCloudUpdate = true;
             }
 
-            const newMaxId = Math.max(
+            let newMaxId = Math.max(
               effectiveSyncedMaxId,
               ...backupJobPostings.map(j => Number(j.id || 0)),
               ...list.map(j => Number(j.id || 0))
             );
+
+            // URL 파라미터(?action=upsert&data=...)로 전달된 공고 즉시 병합
+            if (pendingUrlUpsertItems && pendingUrlUpsertItems.length > 0) {
+              const itemsToProcess = pendingUrlUpsertItems;
+              pendingUrlUpsertItems = null;
+              const mergedResult = mergeIncomingUpsertJobs(itemsToProcess, list, newMaxId);
+              list = mergedResult.list;
+              newMaxId = mergedResult.maxId;
+              needsCloudUpdate = true;
+              showTopAlertBanner('✅ 새 공고가 실시간 등록되었습니다!');
+            }
 
             if (newMaxId > cloudSyncedMaxId) {
               try { localStorage.setItem(SYNCED_MAX_ID_KEY, String(newMaxId)); } catch (e) {}
@@ -1121,6 +1339,14 @@
         });
       } else {
         jobPostings = backupJobPostings.filter(j => !deletedJobIds.has(Number(j.id)));
+        if (pendingUrlUpsertItems && pendingUrlUpsertItems.length > 0) {
+          const itemsToProcess = pendingUrlUpsertItems;
+          pendingUrlUpsertItems = null;
+          const baseMaxId = Math.max(0, ...jobPostings.map(j => Number(j.id || 0)));
+          const mergedResult = mergeIncomingUpsertJobs(itemsToProcess, jobPostings, baseMaxId);
+          jobPostings = mergedResult.list;
+          showTopAlertBanner('✅ 새 공고가 실시간 등록되었습니다!');
+        }
         renderJobs();
       }
     }
